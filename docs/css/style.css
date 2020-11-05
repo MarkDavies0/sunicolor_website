@@ -52,7 +52,7 @@ h2 {
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    width: 100%;
+    width: calc(100% - 25px);
     height: 50px;
     background: rgb(237, 240, 242);
 }
@@ -218,6 +218,8 @@ input:checked+.slider:before {
 @media only screen and (max-width: 600px) {
     #subheader {
         display: block;
+        padding-left: 0px;
+        margin: auto;
     }
     .subContainer {
         margin-top: 15px;
