@@ -218,8 +218,9 @@ function toggleSwiftObjc() {
 
 function sortListAlphabetically(ul) {
         var ul = document.getElementById('colorList');
+        let collator = new Intl.Collator('en', {ignorePunctuation: true});
 
         Array.from(ul.getElementsByTagName("LI"))
-                .sort((a, b) => a.getElementsByTagName("span")[0].textContent.localeCompare(b.getElementsByTagName("span")[0].textContent))
+                .sort((a, b) => collator.compare(a.getElementsByTagName("span")[0].textContent, b.getElementsByTagName("span")[0].textContent))
                 .forEach(li => ul.appendChild(li));
 }
