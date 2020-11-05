@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 LONGEST_NAME = 'tertiarySystemGroupedBackgroundColor';
         }
         setColorContainerWidth();
-        addTextSrollingOnHover();
+        // addTextSrollingOnHover();
         setColorListULWidth()
+        sortListAlphabetically();
 })
 
 window.addEventListener('resize', (event) => {
@@ -213,4 +214,12 @@ function toggleDarkMode() {
 
 function toggleSwiftObjc() {
         isSwift = !isSwift;
+}
+
+function sortListAlphabetically(ul) {
+        var ul = document.getElementById('colorList');
+
+        Array.from(ul.getElementsByTagName("LI"))
+                .sort((a, b) => a.getElementsByTagName("span")[0].textContent.localeCompare(b.getElementsByTagName("span")[0].textContent))
+                .forEach(li => ul.appendChild(li));
 }

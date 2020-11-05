@@ -12,7 +12,9 @@
 <body>
     <!-- Title -->
     <div id="header">
-        <h1>SUNIColor</h1>
+        <a href="index.html">
+            <h1>SUNIColor</h1>
+        </a>
     </div>
 
     <!-- Sub Header -->
@@ -23,7 +25,8 @@
         <a class="langButton" id="objc" style="background-color: rgb(237, 240, 242); color: rgb(135, 157, 192);"
             onclick="langBtnPressed(this)">Obj-C</a>
 
-        <a id="subheaderLink" href="#">About</a>
+        <a id="subheaderLink" href="about.html">How it works</a>
+        <!-- <a id="subheaderLink" href="">About</a>œ -->
     </div>
 
     <!-- UIKIT Div -->
@@ -33,935 +36,1954 @@
 
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.200000);">
-                    <p>A</p>
-                </div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.140000);">
-                    <p>A</p>
-                </div>
-                <span>_searchFieldDisabledBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(50.000000, 50.000000, 52.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(229.000000, 229.000000, 229.000000, 1.000000);"></div>
-                <span>tablePlainHeaderFooterFloatingBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(229.000000, 229.000000, 234.000000, 1.000000);"></div>
-                <span>systemLightGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(124.000000, 124.000000, 128.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(142.000000, 142.000000, 147.000000, 1.000000);"></div>
-                <span>_systemGray2Color</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(213.000000, 213.000000, 219.000000, 1.000000);"></div>
-                <span>systemDarkExtraLightGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(64.000000, 156.000000, 255.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
-                <span>systemBlueColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
-                <span>tertiarySystemGroupedBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.600000);"></div>
-                <span>lightTextColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(9.000000, 9.000000, 33.000000, 0.270000);"></div>
-                <span>systemDarkLightGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
-                <span>darkTextColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(70.000000, 68.000000, 171.000000, 1.000000);"></div>
-                <span>systemDarkPurpleColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 100.000000, 130.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(211.000000, 15.000000, 69.000000, 1.000000);"></div>
-                <span>systemPinkColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.260000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(116.000000, 116.000000, 128.000000, 0.160000);"></div>
-                <span>quaternarySystemFillColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.200000, 0.200000, 0.200000, 0.950000);"></div>
-                <span>_accessibilityButtonShapesBackgroundColorOnLight</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.850000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.800000);"></div>
-                <span>_tvLabelOpacityBColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 1.000000);"></div>
-                <span>tableCellBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
+                    style="background-color: rgba(255.000000, 59.000000, 48.000000, 1.000000);"></div>
                 <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(255.000000, 59.000000, 48.000000, 1.000000);"></div>
                 <span>externalSystemRedColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(153.000000, 102.000000, 51.000000, 1.000000);"></div>
-                <span>brownColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(239.000000, 239.000000, 244.000000, 1.000000);"></div>
-                <span>systemExtraLightGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.000000);"></div>
-                <span>clearColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
                 <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
-                <span>labelColor</span>
+                <span>systemBackgroundColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 0.150000);"></div>
-                <span>_barStyleBlackHairlineShadowColor</span>
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.750000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.750000);">
+                    <p>A</p>
+                </div>
+                <span>_carSystemPrimaryColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.150000);"></div>
+                    style="background-color: rgba(0.980000, 0.980000, 0.980000, 1.000000);"></div>
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.300000);"></div>
-                <span>_systemChromeShadowColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.550000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.550000);"></div>
-                <span>_carSystemFocusSecondaryColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 0.000000, 0.000000, 1.000000);"></div>
-                <span>redColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.040000);"></div>
-                <span>_vibrantLightFillDarkeningColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 87.000000, 208.000000, 0.500000);"></div>
-                <span>_mapkit_userLocationAccuracyRingStrokeColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.550000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.700000);"></div>
-                <span>_tertiaryLabelColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 255.000000, 0.000000, 1.000000);"></div>
-                <span>yellowColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(220.000000, 220.000000, 220.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(35.000000, 35.000000, 35.000000, 1.000000);"></div>
-                <span>_plainTableHeaderFooterTextColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.400000, 0.400000, 0.400000, 1.000000);"></div>
-                <span>_externalSystemGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(249.000000, 249.000000, 249.000000, 1.000000);"></div>
-                <span>pr_lightAccentColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.440000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.280000);"></div>
-                <span>_fillColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.550000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.550000);"></div>
-                <span>_carSystemSecondaryColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(218.000000, 15.000000, 71.000000, 1.000000);"></div>
-                <span>systemDarkPinkColor</span>
-            </li>
-
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.500000);"></div>
-                <span>_mapkit_userLocationAccuracyRingStrokeColorSatellite</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 179.000000, 64.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(201.000000, 52.000000, 0.000000, 1.000000);"></div>
-                <span>systemOrangeColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(56.100000, 84.150000, 135.150000, 1.000000);"></div>
-                <span>tableCellValue1BlueColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.019608, 0.019608, 0.019608, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.980392, 0.980392, 0.980392, 1.000000);"></div>
+                    style="background-color: rgba(0.010000, 0.010000, 0.010000, 1.000000);"></div>
                 <span>_textFieldDisabledBackgroundColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(229.500000, 237.150000, 252.450000, 0.800000);"></div>
-                <span>sectionHeaderBackgroundColor</span>
+                    style="background-color: rgba(116.000000, 116.000000, 128.000000, 0.160000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.260000);">
+                    <p>A</p>
+                </div>
+                <span>_quaternaryFillColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
-                <span>systemDarkBlueColor</span>
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.370000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(84.000000, 84.000000, 88.000000, 0.680000);">
+                    <p>A</p>
+                </div>
+                <span>tableSeparatorColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(4.000000, 4.000000, 15.000000, 0.450000);"></div>
-                <span>systemGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(10.200000, 94.350000, 232.050000, 1.000000);"></div>
-                <span>tableSelectionGradientEndColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(139.000000, 139.000000, 143.000000, 1.000000);"></div>
-                <span>systemDarkMidGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.780392, 0.780392, 0.780392, 1.000000);"></div>
-                <span>_externalSystemMidGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.900000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.780000);"></div>
-                <span>_switchOffColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.500000);"></div>
-                <span>__halfTransparentBlackColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.500000, 0.500000, 0.500000, 0.950000);"></div>
-                <span>_accessibilityButtonShapesDisabledBackgroundColorOnDark</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(40.800000, 109.650000, 211.650000, 1.000000);"></div>
-                <span>tableSelectionColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(250.000000, 248.000000, 255.000000, 0.050000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 7.000000, 25.000000, 0.720000);"></div>
-                <span>_controlVibrantBottomBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(216.750000, 221.850000, 232.050000, 1.000000);"></div>
-                <span>sectionHeaderBorderColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.666667, 0.666667, 0.666667, 1.000000);"></div>
-                <span>lightGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(243.000001, 243.000001, 243.000001, 1.000000);"></div>
-                <span>pr_darkAccentColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
-                <span>_systemInteractionTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(10.000000, 10.000000, 41.000000, 0.380000);"></div>
-                <span>systemDarkLightMidGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(250.000000, 248.000000, 255.000000, 0.150000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 7.000000, 25.000000, 0.050000);"></div>
-                <span>_controlVibrantTopBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(188.000000, 188.000000, 194.000000, 1.000000);"></div>
-                <span>systemDarkLightGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(56.000000, 56.000000, 58.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(198.000000, 198.000000, 200.000000, 1.000000);"></div>
-                <span>opaqueSeparatorColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(90.000000, 200.000000, 250.000000, 1.000000);"></div>
-                <span>externalSystemTealColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(84.000000, 84.000000, 86.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(174.000000, 174.000000, 178.000000, 1.000000);"></div>
-                <span>_systemGray3Color</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(19.890000, 110.925000, 224.910000, 1.000000);"></div>
-                <span>selectionGrabberColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 25.000000, 0.220000);"></div>
-                <span>_systemMidGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 212.000000, 38.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(179.000000, 98.000000, 0.000000, 1.000000);"></div>
-                <span>systemYellowColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(64.000000, 156.000000, 255.000000, 1.000000);"></div>
-                <span>tableCellBlueTextColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(84.000000, 84.000000, 88.000000, 0.680000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.370000);"></div>
-                <span>tableSeparatorLightColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.700000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.800000);"></div>
-                <span>secondaryLabelColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.750000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.750000);"></div>
-                <span>_carSystemFocusPrimaryColor</span>
-            </li>
-            <li class="colorContainer">
+                    style="background-color: rgba(76.000000, 217.000000, 100.000000, 1.000000);"></div>
                 <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(76.000000, 217.000000, 100.000000, 1.000000);"></div>
                 <span>externalSystemGreenColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.400000);"></div>
+                    style="background-color: rgba(0.330000, 0.330000, 0.330000, 1.000000);"></div>
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.240000);"></div>
-                <span>secondarySystemFillColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(234.600000, 239.700000, 252.450000, 1.000000);"></div>
-                <span>sectionHeaderOpaqueBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(25.000000, 25.000000, 100.000000, 0.180000);"></div>
-                <span>systemLightMidGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(104.550000, 0.000000, 188.700000, 1.000000);"></div>
-                <span>textFieldAtomPurpleColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(209.000000, 209.000000, 214.000000, 1.000000);"></div>
-                <span>systemLightMidGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.380000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
-                <span>_controlForegroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.600000, 0.600000, 0.600000, 1.000000);"></div>
-                <span>_vibrantLightFillBurnColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(9.000000, 132.000000, 255.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
-                <span>_linkColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 255.000000, 255.000000, 1.000000);"></div>
-                <span>cyanColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(254.973386, 255.013770, -88.293293, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(278.725076, -57.776918, 263.590701, 1.000000);"></div>
-                <span>_dynamicTestColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(181.000000, 183.000000, 189.000000, 1.000000);"></div>
-                <span>underPageBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(127.500000, 127.500000, 127.500000, 1.000000);"></div>
-                <span>tableCellGrayTextColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(177.000000, 177.000000, 184.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(74.000000, 74.000000, 77.000000, 1.000000);"></div>
-                <span>_groupTableHeaderFooterTextColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(66.300000, 107.100000, 242.250000, 1.000000);"></div>
-                <span>insertionPointColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 255.000000, 0.000000, 1.000000);"></div>
-                <span>greenColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
-                <span>_switchOffImageColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(31.000000, 33.000000, 36.000000, 1.000000);"></div>
-                <span>viewFlipsideBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(68.000000, 68.000000, 70.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(188.000000, 188.000000, 192.000000, 1.000000);"></div>
-                <span>systemGray4Color</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 0.910000);"></div>
-                <span>tableShadowColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 80.000000, 0.050000);"></div>
-                <span>_vibrantLightDividerDarkeningColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.400000);"></div>
-                <span>_tvInterfaceStyleLightContentColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(199.000000, 199.000000, 204.000000, 1.000000);"></div>
-                <span>systemMidGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(172.000000, 142.000000, 104.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(162.000000, 132.000000, 94.000000, 1.000000);"></div>
-                <span>systemBrownColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.470000, 0.470000, 0.470000, 1.000000);"></div>
-                <span>_searchFieldPlaceholderTextClearButtonColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.080000);"></div>
-                <span>tableGroupedTopShadowColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 25.000000, 0.460000);"></div>
-                <span>systemDarkMidGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(111.000000, 113.000000, 121.000000, 1.000000);"></div>
-                <span>scrollViewTexturedBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.150000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.070000);"></div>
-                <span>_carSystemQuaternaryColor</span>
+                    style="background-color: rgba(0.330000, 0.330000, 0.330000, 1.000000);"></div>
+                <span>darkGrayColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
-                <span>tableBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.300000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.300000);"></div>
-                <span>_carSystemTertiaryColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.100000);"></div>
-                <span>_accessibilityButtonShapesNoBlendModeBackgroundColorOnLight</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 145.000000, 210.000000, 1.000000);"></div>
-                <span>systemDarkTealColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(147.000000, 106.000000, 54.000000, 1.000000);"></div>
-                <span>systemDarkYellowColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.550000);"></div>
-                <span>_pageControlIndicatorColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.400000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.550000);"></div>
-                <span>quaternaryLabelColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(10.000000, 10.000000, 120.000000, 0.050000);"></div>
-                <span>systemExtraLightGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(68.000000, 68.000000, 70.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(199.000000, 199.000000, 204.000000, 1.000000);"></div>
-                <span>_controlHighlightColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(199.900000, 199.000000, 204.000000, 1.000000);"></div>
-                <span>tableGroupedSeparatorLightColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.120000);"></div>
-                <span>_controlShadowColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.750000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.600000);"></div>
-                <span>_tvLabelOpacityCColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 255.000000, 1.000000);"></div>
-                <span>blueColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(4.000000, 4.000000, 15.000000, 0.620000);"></div>
-                <span>systemDarkGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 125.000000, 27.000000, 1.000000);"></div>
-                <span>systemDarkGreenColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.300000);"></div>
-                <span>_tvInterfaceStyleDarkContentColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.200000, 0.200000, 0.200000, 1.000000);"></div>
-                <span>_externalSystemExtraDarkGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(112.000000, 215.000000, 255.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 113.000000, 164.000000, 1.000000);"></div>
-                <span>systemTealColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
-                <span>_systemGroupedBackgroundColor</span>
+                <span>blackColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(239.000000, 86.000000, 2.000000, 1.000000);"></div>
-                <span>systemDarkOrangeColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.750000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.750000);"></div>
-                <span>_carSystemPrimaryColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
-                <span>_tertiarySystemBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.600000, 0.600000, 0.600000, 0.950000);"></div>
-                <span>_accessibilityButtonShapesBackgroundColorOnDark</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(129.000008, 129.000008, 129.000008, 1.000000);"></div>
-                <span>pr_backgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.480000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.200000);"></div>
-                <span>_alertControllerDimmingViewColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(216.000000, 216.000000, 220.000000, 1.000000);"></div>
-                <span>_systemGray5Color</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.137255, 0.137255, 0.137255, 1.000000);"></div>
-                <span>_externalSystemSuperDarkGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.320000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.200000);"></div>
-                <span>_tertiaryFillColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.800000);"></div>
-                <span>tableCellHighlightedBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.900000);"></div>
-                <span>tableCellFocusedBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(48.000000, 219.000000, 91.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(36.000000, 138.000000, 61.000000, 1.000000);"></div>
-                <span>systemGreenColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(125.000000, 122.000000, 255.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(54.000000, 52.000000, 163.000000, 1.000000);"></div>
-                <span>systemIndigoColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(189.000000, 189.000000, 194.000000, 1.000000);"></div>
-                <span>_webContentBackgroundColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(2.000000, 2.000000, 31.000000, 0.170000);"></div>
-                <span>systemDarkExtraLightGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.170000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.170000);"></div>
-                <span>_textFieldDisabledBorderColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(70.000000, 147.000000, 255.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
-                <span>_systemBlueColor2</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 105.000000, 97.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(215.000000, 0.000000, 21.000000, 1.000000);"></div>
-                <span>systemRedColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(99.000000, 99.000000, 102.000000, 1.000000);"></div>
-                <span>systemDarkGrayColor</span>
-            </li>
-            <li class="colorContainer">
+                    style="background-color: rgba(127.500000, 0.000000, 127.500000, 1.000000);"></div>
                 <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(127.500000, 0.000000, 127.500000, 1.000000);"></div>
                 <span>purpleColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(26.000000, 116.000000, 252.000000, 0.100000);"></div>
-                <span>_mapkit_userLocationAccuracyRingFillColor</span>
-            </li>
-            <li class="colorContainer">
+                    style="background-color: rgba(132.600006, 142.800003, 147.899994, 0.800000);">
+                    <p>A</p>
+                </div>
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
-                <span>systemGray6Color</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(81.600000, 102.000000, 145.350000, 1.000000);"></div>
-                <span>tableCellValue2BlueColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.500000, 0.500000, 0.500000, 1.000000);"></div>
-                <span>grayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(25.000000, 25.000000, 100.000000, 0.070000);"></div>
-                <span>systemLightGrayTintColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(218.000000, 143.000000, 255.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(137.000000, 68.000000, 171.000000, 1.000000);"></div>
-                <span>systemPurpleColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.200000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.200000);"></div>
-                <span>_textFieldBorderColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 0.000000, 255.000000, 1.000000);"></div>
-                <span>magentaColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 84.150000, 165.750000, 0.200000);"></div>
-                <span>selectionHighlightColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 60.000000, 0.150000);"></div>
-                <span>_vibrantLightSectionDelimiterDividerDarkeningColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.300000);"></div>
-                <span>_barHairlineShadowColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(224.000000, 6.000000, 27.000000, 1.000000);"></div>
-                <span>systemDarkRedColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.333333, 0.333333, 0.333333, 1.000000);"></div>
-                <span>darkGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(255.000000, 127.500000, 0.000000, 1.000000);"></div>
-                <span>orangeColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.450000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.450000);"></div>
-                <span>_pageControlPlatterIndicatorColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.250000);"></div>
-                <span>_accessibilityButtonShapesNoBlendModeBackgroundColorOnDark</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(174.000000, 174.000000, 178.000000, 1.000000);"></div>
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(108.000000, 108.000000, 112.000000, 1.000000);"></div>
-                <span>systemGrayColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(5.100000, 140.250000, 244.800000, 1.000000);"></div>
-                <span>tableSelectionGradientStartColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.639216, 0.639216, 0.639216, 1.000000);"></div>
-                <span>_vibrantDarkFillDodgeColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.250980, 0.250980, 0.250980, 1.000000);"></div>
-                <span>_vibrantLightSectionDelimiterDividerBurnColor</span>
-            </li>
-            <li class="colorContainer">
-                <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(132.600000, 142.800000, 147.900000, 0.800000);"></div>
+                    style="background-color: rgba(132.600006, 142.800003, 147.899994, 0.800000);">
+                    <p>A</p>
+                </div>
                 <span>sectionListBorderColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(100.000000, 210.000000, 255.000000, 1.000000);"></div>
+                    style="background-color: rgba(0.200000, 0.200000, 0.200000, 0.950000);">
+                    <p>A</p>
+                </div>
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
-                <span>_alternateSystemInteractionTintColor</span>
+                    style="background-color: rgba(0.200000, 0.200000, 0.200000, 0.950000);">
+                    <p>A</p>
+                </div>
+                <span>_accessibilityButtonShapesBackgroundColorOnLight</span>
             </li>
             <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.370000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(84.000000, 84.000000, 88.000000, 0.680000);">
+                    <p>A</p>
+                </div>
+                <span>_separatorColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(2.000000, 2.000000, 31.000000, 0.170000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(2.000000, 2.000000, 31.000000, 0.170000);">
+                    <p>A</p>
+                </div>
+                <span>systemDarkExtraLightGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>tableBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(54.000000, 52.000000, 163.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(125.000000, 122.000000, 255.000000, 1.000000);"></div>
+                <span>systemIndigoColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.170000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.170000);">
+                    <p>A</p>
+                </div>
+                <span>_textFieldDisabledBorderColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>redColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(199.899994, 199.000000, 204.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(199.899994, 199.000000, 204.000000, 1.000000);"></div>
+                <span>tableGroupedSeparatorLightColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(90.000000, 200.000000, 250.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(90.000000, 200.000000, 250.000000, 1.000000);"></div>
+                <span>externalSystemTealColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.400000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.400000);">
+                    <p>A</p>
+                </div>
+                <span>_tvInterfaceStyleLightContentColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.320000);">
+                    <p>A</p>
+                </div>
+                <span>tertiarySystemFillColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(188.000000, 188.000000, 192.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(68.000000, 68.000000, 70.000000, 1.000000);"></div>
+                <span>tableCellGroupedSelectedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>_systemBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(142.000000, 142.000000, 147.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(124.000000, 124.000000, 128.000000, 1.000000);"></div>
+                <span>systemGray2Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 255.000000, 1.000000);"></div>
+                <span>blueColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(213.000000, 213.000000, 219.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(213.000000, 213.000000, 219.000000, 1.000000);"></div>
+                <span>systemDarkExtraLightGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.400000);">
+                    <p>A</p>
+                </div>
+                <span>_quaternaryLabelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(64.000000, 156.000000, 255.000000, 1.000000);"></div>
+                <span>textFieldAtomBlueColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.700000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <span>placeholderTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(198.000000, 198.000000, 200.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(56.000000, 56.000000, 58.000000, 1.000000);"></div>
+                <span>_splitViewBorderColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 125.000000, 27.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 125.000000, 27.000000, 1.000000);"></div>
+                <span>systemDarkGreenColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(129.000000, 129.000000, 129.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(129.000000, 129.000000, 129.000000, 1.000000);"></div>
+                <span>pr_backgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>systemBlackColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                <span>_secondarySystemBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(163.000000, 163.000000, 168.000000, 1.000000);"></div>
                 <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(163.000000, 163.000000, 168.000000, 1.000000);"></div>
                 <span>systemDarkLightMidGrayColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <span>_pageControlIndicatorColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.700000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <span>_tertiaryLabelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(99.000000, 99.000000, 102.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(99.000000, 99.000000, 102.000000, 1.000000);"></div>
+                <span>systemDarkGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(243.000000, 243.000000, 243.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(243.000000, 243.000000, 243.000000, 1.000000);"></div>
+                <span>pr_darkAccentColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(199.000000, 199.000000, 204.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(68.000000, 68.000000, 70.000000, 1.000000);"></div>
+                <span>_controlHighlightColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.660000, 0.660000, 0.660000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.660000, 0.660000, 0.660000, 1.000000);"></div>
+                <span>lightGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.300000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.150000);">
+                    <p>A</p>
+                </div>
+                <span>_systemChromeShadowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 25.000000, 0.220000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 25.000000, 0.220000);">
+                    <p>A</p>
+                </div>
+                <span>_systemMidGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.500000, 0.500000, 0.500000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.500000, 0.500000, 0.500000, 1.000000);"></div>
+                <span>grayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 0.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 0.000000, 255.000000, 1.000000);"></div>
+                <span>magentaColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(10.000000, 10.000000, 41.000000, 0.380000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(10.000000, 10.000000, 41.000000, 0.380000);">
+                    <p>A</p>
+                </div>
+                <span>systemDarkLightMidGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.470000, 0.470000, 0.470000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.470000, 0.470000, 0.470000, 1.000000);"></div>
+                <span>_searchFieldPlaceholderTextClearButtonColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 255.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 255.000000, 255.000000, 1.000000);"></div>
+                <span>cyanColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 7.000000, 25.000000, 0.720000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(250.000000, 248.000000, 255.000000, 0.050000);">
+                    <p>A</p>
+                </div>
+                <span>_controlVibrantBottomBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(278.720001, -57.770000, 263.589996, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(254.970001, 255.009995, -88.290001, 1.000000);"></div>
+                <span>_dynamicTestColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(9.000000, 132.000000, 255.000000, 1.000000);"></div>
+                <span>linkColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.120000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.120000);">
+                    <p>A</p>
+                </div>
+                <span>_controlShadowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.300000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.300000);">
+                    <p>A</p>
+                </div>
+                <span>_tvInterfaceStyleDarkContentColor</span>
+            </li>
+            <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
                     style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.380000);">
+                    <p>A</p>
+                </div>
+                <span>_controlForegroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(216.750000, 221.850006, 232.050003, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(216.750000, 221.850006, 232.050003, 1.000000);"></div>
+                <span>sectionHeaderBorderColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(70.000000, 68.000000, 171.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(70.000000, 68.000000, 171.000000, 1.000000);"></div>
+                <span>systemDarkPurpleColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>tableCellPlainBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
+                <span>_tertiarySystemBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(181.000000, 183.000000, 189.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(181.000000, 183.000000, 189.000000, 1.000000);"></div>
+                <span>underPageBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(4.000000, 4.000000, 15.000000, 0.450000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(4.000000, 4.000000, 15.000000, 0.450000);">
+                    <p>A</p>
+                </div>
+                <span>systemGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 1.000000);"></div>
+                <span>systemWhiteColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(76.500000, 86.699997, 107.099998, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(76.500000, 86.699997, 107.099998, 1.000000);"></div>
+                <span>infoTextOverPinStripeTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.250000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.250000);">
+                    <p>A</p>
+                </div>
+                <span>_accessibilityButtonShapesNoBlendModeBackgroundColorOnDark</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.630000, 0.630000, 0.630000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.630000, 0.630000, 0.630000, 1.000000);"></div>
+                <span>_vibrantDarkFillDodgeColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <span>_mapkit_userLocationAccuracyRingStrokeColorSatellite</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(229.000000, 229.000000, 234.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(229.000000, 229.000000, 234.000000, 1.000000);"></div>
+                <span>systemLightGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                <span>_systemBackgroundSectionColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.240000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.400000);">
+                    <p>A</p>
+                </div>
+                <span>_secondaryFillColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.780000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.900000);">
+                    <p>A</p>
+                </div>
+                <span>_switchOffColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <span>tableCellDisabledBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 0.150000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 0.150000);">
+                    <p>A</p>
+                </div>
+                <span>_barStyleBlackHairlineShadowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                <span>secondarySystemGroupedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>darkTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(188.000000, 188.000000, 194.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(188.000000, 188.000000, 194.000000, 1.000000);"></div>
+                <span>systemDarkLightGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(218.000000, 15.000000, 71.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(218.000000, 15.000000, 71.000000, 1.000000);"></div>
+                <span>systemDarkPinkColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(188.000000, 188.000000, 192.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(68.000000, 68.000000, 70.000000, 1.000000);"></div>
+                <span>_systemGray4Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.370000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(84.000000, 84.000000, 88.000000, 0.680000);">
+                    <p>A</p>
+                </div>
+                <span>separatorColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(35.000000, 35.000000, 35.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(220.000000, 220.000000, 220.000000, 1.000000);"></div>
+                <span>_plainTableHeaderFooterTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.500000, 0.500000, 0.500000, 0.950000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.500000, 0.500000, 0.500000, 0.950000);">
+                    <p>A</p>
+                </div>
+                <span>_accessibilityButtonShapesDisabledBackgroundColorOnDark</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>_carSystemFocusLabelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 87.000000, 208.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 87.000000, 208.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <span>_mapkit_userLocationAccuracyRingStrokeColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.800000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.700000);">
+                    <p>A</p>
+                </div>
+                <span>_secondaryLabelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 25.000000, 0.220000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 25.000000, 0.220000);">
+                    <p>A</p>
+                </div>
+                <span>systemMidGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(10.200000, 94.349998, 232.050003, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(10.200000, 94.349998, 232.050003, 1.000000);"></div>
+                <span>tableSelectionGradientEndColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.250000, 0.250000, 0.250000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.250000, 0.250000, 0.250000, 1.000000);"></div>
+                <span>_vibrantLightDividerBurnColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 138.000000, 61.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(48.000000, 219.000000, 91.000000, 1.000000);"></div>
+                <span>_systemSelectedColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <span>whiteColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(147.000000, 106.000000, 54.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(147.000000, 106.000000, 54.000000, 1.000000);"></div>
+                <span>systemDarkYellowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(189.000000, 189.000000, 194.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(189.000000, 189.000000, 194.000000, 1.000000);"></div>
+                <span>_webContentBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(249.000000, 249.000000, 249.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(249.000000, 249.000000, 249.000000, 1.000000);"></div>
+                <span>pr_lightAccentColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.700000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <span>_placeholderTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 138.000000, 61.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(48.000000, 219.000000, 91.000000, 1.000000);"></div>
+                <span>systemGreenColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(5.100000, 140.250000, 244.800003, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(5.100000, 140.250000, 244.800003, 1.000000);"></div>
+                <span>tableSelectionGradientStartColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.900000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.900000);">
+                    <p>A</p>
+                </div>
+                <span>tableCellFocusedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(201.000000, 52.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 179.000000, 64.000000, 1.000000);"></div>
+                <span>systemOrangeColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.100000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.100000);">
+                    <p>A</p>
+                </div>
+                <span>_accessibilityButtonShapesNoBlendModeBackgroundColorOnLight</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 80.000000, 0.050000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 80.000000, 0.050000);">
+                    <p>A</p>
+                </div>
+                <span>_vibrantLightDividerDarkeningColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
+                <span>tertiarySystemBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.300000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.300000);">
+                    <p>A</p>
+                </div>
+                <span>_barHairlineShadowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.370000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(84.000000, 84.000000, 88.000000, 0.680000);">
+                    <p>A</p>
+                </div>
+                <span>tableSeparatorLightColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.300000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.300000);">
+                    <p>A</p>
+                </div>
+                <span>_carSystemTertiaryColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>_systemGroupBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 145.000000, 210.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 145.000000, 210.000000, 1.000000);"></div>
+                <span>systemDarkTealColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(111.000000, 113.000000, 121.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(111.000000, 113.000000, 121.000000, 1.000000);"></div>
+                <span>scrollViewTexturedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.240000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.400000);">
+                    <p>A</p>
+                </div>
+                <span>_markedTextBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(153.000000, 102.000000, 51.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(153.000000, 102.000000, 51.000000, 1.000000);"></div>
+                <span>brownColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(198.000000, 198.000000, 200.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(56.000000, 56.000000, 58.000000, 1.000000);"></div>
+                <span>_opaqueSeparatorColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.070000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.150000);">
+                    <p>A</p>
+                </div>
+                <span>_carSystemQuaternaryColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 127.500000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 127.500000, 0.000000, 1.000000);"></div>
+                <span>orangeColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(108.000000, 108.000000, 112.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(174.000000, 174.000000, 178.000000, 1.000000);"></div>
+                <span>systemGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>tableCellbackgroundColorCarPlay</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.400000, 0.400000, 0.400000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.400000, 0.400000, 0.400000, 1.000000);"></div>
+                <span>_externalSystemGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 0.910000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 0.910000);">
+                    <p>A</p>
+                </div>
+                <span>tableShadowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <span>_carSystemSecondaryColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <span>__halfTransparentBlackColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                <span>_systemGroupBackgroundCellColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                <span>systemGray6Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <span>labelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.280000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.440000);">
+                    <p>A</p>
+                </div>
+                <span>_fillColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>groupTableViewBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
+                <span>systemDarkBlueColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 59.000000, 48.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 59.000000, 48.000000, 1.000000);"></div>
+                <span>_systemDestructiveTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <span>_externalSystemWhiteColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.480000);">
+                    <p>A</p>
+                </div>
+                <span>_alertControllerDimmingViewColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 7.000000, 25.000000, 0.050000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(250.000000, 248.000000, 255.000000, 0.150000);">
+                    <p>A</p>
+                </div>
+                <span>_controlVibrantTopBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 60.000000, 0.150000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 60.000000, 0.150000);">
+                    <p>A</p>
+                </div>
+                <span>_vibrantLightSectionDelimiterDividerDarkeningColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <span>_tvLabelOpacityAColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(239.000000, 239.000000, 244.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(239.000000, 239.000000, 244.000000, 1.000000);"></div>
+                <span>systemExtraLightGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>_windowBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(224.000000, 6.000000, 27.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(224.000000, 6.000000, 27.000000, 1.000000);"></div>
+                <span>systemDarkRedColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
                 <span>_secondarySystemGroupedBackgroundColor</span>
             </li>
             <li class="colorContainer">
                 <div class="colorItem" onclick="copyColor(this)"
-                    style="background-color: rgba(76.500000, 86.700000, 107.100000, 1.000000);"></div>
-                <span>infoTextOverPinStripeTextColor</span>
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.040000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.040000);">
+                    <p>A</p>
+                </div>
+                <span>_vibrantLightFillDarkeningColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(188.000000, 188.000000, 192.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(68.000000, 68.000000, 70.000000, 1.000000);"></div>
+                <span>tableCellPlainSelectedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.250000, 0.250000, 0.250000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.250000, 0.250000, 0.250000, 1.000000);"></div>
+                <span>_vibrantLightSectionDelimiterDividerBurnColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.320000);">
+                    <p>A</p>
+                </div>
+                <span>_tertiaryFillColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(9.000000, 9.000000, 33.000000, 0.270000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(9.000000, 9.000000, 33.000000, 0.270000);">
+                    <p>A</p>
+                </div>
+                <span>systemDarkLightGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
+                <span>tableCellBlueTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.080000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.080000);">
+                    <p>A</p>
+                </div>
+                <span>tableGroupedTopShadowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(229.000000, 229.000000, 229.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(50.000000, 50.000000, 52.000000, 1.000000);"></div>
+                <span>tablePlainHeaderFooterFloatingBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                <span>tableCellGroupedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.500000);">
+                    <p>A</p>
+                </div>
+                <span>__halfTransparentWhiteColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.800000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.700000);">
+                    <p>A</p>
+                </div>
+                <span>_monochromeCellImageTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(216.000000, 216.000000, 220.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
+                <span>systemGray5Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(31.000000, 33.000000, 36.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(31.000000, 33.000000, 36.000000, 1.000000);"></div>
+                <span>viewFlipsideBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>keyboardFocusIndicatorColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(229.500000, 237.149994, 252.449997, 0.800000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(229.500000, 237.149994, 252.449997, 0.800000);">
+                    <p>A</p>
+                </div>
+                <span>sectionHeaderBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(4.000000, 4.000000, 15.000000, 0.620000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(4.000000, 4.000000, 15.000000, 0.620000);">
+                    <p>A</p>
+                </div>
+                <span>systemDarkGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.200000, 0.200000, 0.200000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.200000, 0.200000, 0.200000, 1.000000);"></div>
+                <span>_externalSystemExtraDarkGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(26.000000, 116.000000, 252.000000, 0.100000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(26.000000, 116.000000, 252.000000, 0.100000);">
+                    <p>A</p>
+                </div>
+                <span>_mapkit_userLocationAccuracyRingFillColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(74.000000, 74.000000, 77.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(177.000000, 177.000000, 184.000000, 1.000000);"></div>
+                <span>_groupTableHeaderFooterTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(25.000000, 25.000000, 100.000000, 0.070000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(25.000000, 25.000000, 100.000000, 0.070000);">
+                    <p>A</p>
+                </div>
+                <span>systemLightGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(9.000000, 132.000000, 255.000000, 1.000000);"></div>
+                <span>_linkColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(81.599998, 102.000000, 145.350006, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(81.599998, 102.000000, 145.350006, 1.000000);"></div>
+                <span>tableCellValue2BlueColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(229.000000, 229.000000, 229.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(50.000000, 50.000000, 52.000000, 1.000000);"></div>
+                <span>tablePlainHeaderFooterBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.140000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <span>_searchFieldDisabledBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(100.000000, 210.000000, 255.000000, 1.000000);"></div>
+                <span>_carSystemFocusColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>_contentBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(137.000000, 68.000000, 171.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(218.000000, 143.000000, 255.000000, 1.000000);"></div>
+                <span>systemPurpleColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>_textFieldBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.480000);">
+                    <p>A</p>
+                </div>
+                <span>_dimmingViewColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.600000, 0.600000, 0.600000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.600000, 0.600000, 0.600000, 1.000000);"></div>
+                <span>_vibrantLightFillBurnColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.800000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.800000);">
+                    <p>A</p>
+                </div>
+                <span>tableCellHighlightedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(64.000000, 156.000000, 255.000000, 1.000000);"></div>
+                <span>_appKeyColorOrDefaultTint</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.600000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.750000);">
+                    <p>A</p>
+                </div>
+                <span>_tvLabelOpacityCColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>_externalBarBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 25.000000, 0.460000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 25.000000, 0.460000);">
+                    <p>A</p>
+                </div>
+                <span>systemDarkMidGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.780000, 0.780000, 0.780000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.780000, 0.780000, 0.780000, 1.000000);"></div>
+                <span>_externalSystemMidGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(209.000000, 209.000000, 214.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(209.000000, 209.000000, 214.000000, 1.000000);"></div>
+                <span>systemLightMidGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(66.300003, 107.099998, 242.250000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(66.300003, 107.099998, 242.250000, 1.000000);"></div>
+                <span>insertionPointColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(179.000000, 98.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 212.000000, 38.000000, 1.000000);"></div>
+                <span>systemYellowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(64.000000, 156.000000, 255.000000, 1.000000);"></div>
+                <span>systemBlueColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
+                <span>_systemBackgroundSectionCellColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 1.000000);"></div>
+                <span>tableCellBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.450000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.450000);">
+                    <p>A</p>
+                </div>
+                <span>_pageControlPlatterIndicatorColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(211.000000, 15.000000, 69.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 100.000000, 130.000000, 1.000000);"></div>
+                <span>systemPinkColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(188.000000, 188.000000, 192.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(68.000000, 68.000000, 70.000000, 1.000000);"></div>
+                <span>systemGray4Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.000000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.000000);">
+                    <p>A</p>
+                </div>
+                <span>clearColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(19.889999, 110.919998, 224.910004, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(19.889999, 110.919998, 224.910004, 1.000000);"></div>
+                <span>selectionGrabberColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.400000);">
+                    <p>A</p>
+                </div>
+                <span>quaternaryLabelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.370000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(84.000000, 84.000000, 88.000000, 0.680000);">
+                    <p>A</p>
+                </div>
+                <span>tableSeparatorDarkColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(56.099998, 84.150002, 135.149994, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(56.099998, 84.150002, 135.149994, 1.000000);"></div>
+                <span>tableCellValue1BlueColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(139.000000, 139.000000, 143.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(139.000000, 139.000000, 143.000000, 1.000000);"></div>
+                <span>systemDarkMidGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.280000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.440000);">
+                    <p>A</p>
+                </div>
+                <span>systemFillColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(25.000000, 25.000000, 100.000000, 0.180000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(25.000000, 25.000000, 100.000000, 0.180000);">
+                    <p>A</p>
+                </div>
+                <span>systemLightMidGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                <span>secondarySystemBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <span>_carSystemFocusSecondaryColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 113.000000, 164.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(112.000000, 215.000000, 255.000000, 1.000000);"></div>
+                <span>systemTealColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(234.600006, 239.699997, 252.449997, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(234.600006, 239.699997, 252.449997, 1.000000);"></div>
+                <span>sectionHeaderOpaqueBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(188.000000, 188.000000, 192.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(68.000000, 68.000000, 70.000000, 1.000000);"></div>
+                <span>tableCellDefaultSelectionTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(174.000000, 174.000000, 178.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(84.000000, 84.000000, 86.000000, 1.000000);"></div>
+                <span>_systemGray3Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.750000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.750000);">
+                    <p>A</p>
+                </div>
+                <span>_carSystemFocusPrimaryColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 84.150002, 165.750000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 84.150002, 165.750000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <span>selectionHighlightColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 64.000000, 221.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(70.000000, 147.000000, 255.000000, 1.000000);"></div>
+                <span>_systemBlueColor2</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>systemGroupedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.250000, 0.250000, 0.250000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.250000, 0.250000, 0.250000, 1.000000);"></div>
+                <span>_externalSystemDarkGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 0.000000, 1.000000);"></div>
+                <span>yellowColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(127.500000, 127.500000, 127.500000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(127.500000, 127.500000, 127.500000, 1.000000);"></div>
+                <span>tableCellGrayTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
+                <span>tertiarySystemGroupedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.600000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.600000);">
+                    <p>A</p>
+                </div>
+                <span>lightTextColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(104.550003, 0.000000, 188.699997, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(104.550003, 0.000000, 188.699997, 1.000000);"></div>
+                <span>textFieldAtomPurpleColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 255.000000, 255.000000, 1.000000);"></div>
+                <span>tableCellGroupedBackgroundColorLegacyWhite</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(100.000000, 210.000000, 255.000000, 1.000000);"></div>
+                <span>_alternateSystemInteractionTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(174.000000, 174.000000, 178.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(84.000000, 84.000000, 86.000000, 1.000000);"></div>
+                <span>_searchBarBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.240000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(120.000000, 120.000000, 128.000000, 0.400000);">
+                    <p>A</p>
+                </div>
+                <span>secondarySystemFillColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(142.000000, 142.000000, 147.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(124.000000, 124.000000, 128.000000, 1.000000);"></div>
+                <span>_systemGray2Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <span>_labelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.800000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.700000);">
+                    <p>A</p>
+                </div>
+                <span>secondaryLabelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 255.000000, 0.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 255.000000, 0.000000, 1.000000);"></div>
+                <span>greenColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.800000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.850000);">
+                    <p>A</p>
+                </div>
+                <span>_tvLabelOpacityBColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(239.000000, 86.000000, 2.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(239.000000, 86.000000, 2.000000, 1.000000);"></div>
+                <span>systemDarkOrangeColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(215.000000, 0.000000, 21.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(255.000000, 105.000000, 97.000000, 1.000000);"></div>
+                <span>systemRedColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 1.000000);"></div>
+                <span>_systemGroupedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(199.000000, 199.000000, 204.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(199.000000, 199.000000, 204.000000, 1.000000);"></div>
+                <span>systemMidGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(174.000000, 174.000000, 178.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(84.000000, 84.000000, 86.000000, 1.000000);"></div>
+                <span>systemGray3Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.130000, 0.130000, 0.130000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.130000, 0.130000, 0.130000, 1.000000);"></div>
+                <span>_externalSystemSuperDarkGrayColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(162.000000, 132.000000, 94.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(172.000000, 142.000000, 104.000000, 1.000000);"></div>
+                <span>systemBrownColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
+                <span>_tertiarySystemGroupedBackgroundColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(116.000000, 116.000000, 128.000000, 0.160000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(118.000000, 118.000000, 128.000000, 0.260000);">
+                    <p>A</p>
+                </div>
+                <span>quaternarySystemFillColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 1.000000);"></div>
+                <span>_switchOffImageColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(10.000000, 10.000000, 120.000000, 0.050000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(10.000000, 10.000000, 120.000000, 0.050000);">
+                    <p>A</p>
+                </div>
+                <span>systemExtraLightGrayTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(216.000000, 216.000000, 220.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(54.000000, 54.000000, 56.000000, 1.000000);"></div>
+                <span>_systemGray5Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.600000, 0.600000, 0.600000, 0.950000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.600000, 0.600000, 0.600000, 0.950000);">
+                    <p>A</p>
+                </div>
+                <span>_accessibilityButtonShapesBackgroundColorOnDark</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 122.000000, 255.000000, 1.000000);"></div>
+                <span>_systemInteractionTintColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(60.000000, 60.000000, 67.000000, 0.700000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 245.000000, 0.550000);">
+                    <p>A</p>
+                </div>
+                <span>tertiaryLabelColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(235.000000, 235.000000, 240.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(36.000000, 36.000000, 38.000000, 1.000000);"></div>
+                <span>_systemGray6Color</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(198.000000, 198.000000, 200.000000, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(56.000000, 56.000000, 58.000000, 1.000000);"></div>
+                <span>opaqueSeparatorColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(0.000000, 0.000000, 0.000000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(1.000000, 1.000000, 1.000000, 0.200000);">
+                    <p>A</p>
+                </div>
+                <span>_textFieldBorderColor</span>
+            </li>
+            <li class="colorContainer">
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(40.799999, 109.650002, 211.649994, 1.000000);"></div>
+                <div class="colorItem" onclick="copyColor(this)"
+                    style="background-color: rgba(40.799999, 109.650002, 211.649994, 1.000000);"></div>
+                <span>tableSelectionColor</span>
             </li>
         </ul>
     </div>
 
     <!-- ChatKit Div -->
-    <h2>ChatKit</h2>
+    <!-- <h2>ChatKit</h2>
     <div class="horizontal">
         <ul id="colorList">
 
         </ul>
+    </div> -->
+
+    <div class="footerTextBox">
+        Copyright ©
+        <a href="https://www.sunicolor.com/" class="footerLink">SUNIColor.com</a>
+        2020
+        <br>
+        Developed by
+        <a href="https://www.mark--davies.com/" class="footerTextBox">Mark Davies</a>
+        in 🇨🇦
     </div>
+
 </body>
 
 </html>

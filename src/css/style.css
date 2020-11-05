@@ -6,6 +6,7 @@ html.color-theme-in-transition, html.color-theme-in-transition *, html.color-the
 html {
     --background: rgb(237, 240, 242);
     --text-color-normal: black;
+    line-height: 1.5;
 }
 
 html[data-theme='dark'] {
@@ -24,6 +25,9 @@ h1 {
     /* color: rgb(135, 157, 192); Original LGHTER*/
     color: rgb(85, 101, 126);
     font-size: 2.5em;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-weight: normal;
+    /* font-size:42px */
 }
 
 h2 {
@@ -38,6 +42,10 @@ h2 {
     display: block;
 }
 
+#header a {
+    text-decoration: none;
+}
+
 #subheader {
     padding-left: 25px;
     top: 0;
@@ -50,9 +58,10 @@ h2 {
 }
 
 #subheaderLink {
-    position: absolute;
-    right: 10vw;
+    float: right;
+    /* right: 10vw; */
     color: rgb(85, 101, 126);
+    padding-left: 15px;
 }
 
 .horizontal {
@@ -63,6 +72,11 @@ h2 {
     background-color: white;
     display: flex;
     align-items: center;
+}
+
+.horizontal p {
+    padding-left: 25px;
+    line-height: 2;
 }
 
 ul#colorList {
@@ -93,6 +107,8 @@ ul#colorList li {
 }
 
 .colorContainer p {
+    /* TESTING */
+    color: transparent;
     padding-right: 10px;
     padding-top: calc(9vh - 20px);
     padding-inline-start: 0;
@@ -220,4 +236,23 @@ input:checked+.slider:before {
     cursor: pointer;
     color: #FFFFFF !important;
     background-color: rgb(135, 157, 192, 0.7) !important;
+}
+
+.footerTextBox {
+    font-size: small;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footerTextBox a {
+    box-sizing: border-box;
+    margin-top: 0px;
+    min-width: 0px;
+    color: rgb(85, 101, 126);
+    text-decoration-line: none;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    text-decoration: none;
 }
