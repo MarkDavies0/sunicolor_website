@@ -18,19 +18,57 @@
     </div>
 
     <!-- Sub Header -->
-    <div id="subheader">
+    <!-- <div id="subheader">
+    </div> -->
+
+
+    <h2>How do I use it?</h2>
+    <div class="horizontal">
+        <p>Colors are shown in groups of two, the left showing what the color looks like in light mode and the right in
+            dark mode.
+            <br>
+            Note: colors with an alpha component are displayed over a white background.
+            <br>
+            Simply click on a color swatch to copy the corresponding UIColor initializer. Use the buttons below the
+            search bar to select the language, Swift or Objective-C.
+            <br>
+        </p>
+    </div>
+    
+    <h2>Where did these colors come from?</h2>
+    <div class="horizontal">
+    <p>The colors are from internal iOS frameworks such as ChatKit, SiriUI, and FitnessUI. These color constants are
+        defined by Apple but are private and inaccessible to developers. In addition SUNIColor also includes all public
+        UIColor constants.
+        <br>
+        Learn more about <a href="https://bunn.dev/frameworks/2019/03/16/private-frameworks.html">private frameworks</a> (blog post by Fernando Bunn).
+    </p>
     </div>
 
-    <h2>How it works</h2>
+    <h2>How did you find them?</h2>
     <div class="horizontal">
-        <p>SUNIColor extracts colors from Apple's public and private iOS frameworks using Obj-C selectors
-            <br>
-            Learn more about <a href="https://bunn.dev/frameworks/2019/03/16/private-frameworks.html">private frameworks</a>
-            <br>
-            The extracted UIColors are then converted into CSS colors and added to an HTML list
-        </p>
+    <p>Using Private Framework header dumps from previous versions of iOS we can see all of the UIColor constants used
+        by Apple. Then using Objective-C’s dynamic runtime we can load these frameworks on device and use
+        “[NSClassFromString(@"UIColor") valueForKey: _selector_ ” to access the UIColor values.
+    </p>
+    </div>
+
+    </div>
+
+    <div class="footerTextBox">
+        Copyright ©
+        <a href="https://sunicolor.com/" class="footerLink">SUNIColor.com</a>
+        2020
+        <br>
+        Developed by
+        <a href="https://www.mark--davies.com/" class="footerTextBox">Mark Davies</a>
+        in 🇨🇦
     </div>
 
 </body>
 
 </html>
+<!-- 
+Learn more about <a href="https://bunn.dev/frameworks/2019/03/16/private-frameworks.html">private frameworks</a>
+            <br>
+            The extracted UIColors are then converted into CSS colors and added to an HTML list -->
