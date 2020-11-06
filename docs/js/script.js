@@ -179,7 +179,6 @@ function setColorListULWidth() {
         for (var i = 0; i < listUls.length; i++) {
                 listUls[i].style.width = listWidth + "px";
         }
-        console.log("here");
 }
 
 /**
