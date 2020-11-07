@@ -204,7 +204,7 @@ input:checked+.slider:before {
 /* Search Bar */
 
 #searchInput {
-    background-image: url('./assets/magGlass.png');
+    background-image: url("assets/magGlass.png");
     background-position: 10px 12px;
     background-repeat: no-repeat;
     width: 20%;

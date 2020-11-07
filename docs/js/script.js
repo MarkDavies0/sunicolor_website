@@ -1,5 +1,6 @@
 let LONGEST_NAME = 'mailModernLabelledAddressAtomDefaultTextColor';
 var isSwift = true;
+const publicColors = ['systemBackground', 'secondarySystemBackground', 'tertiarySystemBackground', 'systemGroupedBackground', 'secondarySystemGroupedBackground', 'tertiarySystemGroupedBackground', 'label', 'secondaryLabel', 'tertiaryLabel', 'quaternaryLabel', 'placeholderText', 'separator', 'opaqueSeparator', 'systemBlue', 'systemGreen', 'systemIndigo', 'systemOrange', 'systemPink', 'systemPurple', 'systemRed', 'systemTeal', 'systemYellow', 'systemGray', 'systemGray2', 'systemGray3', 'systemGray4', 'systemGray5', 'systemGray5'];
 
 document.addEventListener('DOMContentLoaded', (event) => {
         // Execute after the DOM Loads
@@ -80,6 +81,18 @@ function langBtnPressed(elmnt) {
 }
 
 function copyColor(elmnt) {
+        let name = elmnt.parentElement.getElementsByTagName("span")[0].innerText;
+        let swiftName = name.substring(0, name.length - 5);
+        
+        if (name.length > 5 && publicColors.includes(swiftName)) {
+                if (isSwift) {
+                        copyToClipboard(`UIColor.${swiftName}`);
+                } else {
+                        copyToClipboard(`UIColor.${name}`);
+                }
+                return
+        }
+
         let colorStr = elmnt.style.backgroundColor;
         let type = colorStr.split("(")[0];
         let rest = colorStr.split("(")[1];
@@ -217,7 +230,7 @@ function toggleSwiftObjc() {
 
 function sortListAlphabetically(ul) {
         var ul = document.getElementById('colorList');
-        let collator = new Intl.Collator('en', {ignorePunctuation: true});
+        let collator = new Intl.Collator('en', { ignorePunctuation: true });
 
         Array.from(ul.getElementsByTagName("LI"))
                 .sort((a, b) => collator.compare(a.getElementsByTagName("span")[0].textContent, b.getElementsByTagName("span")[0].textContent))
