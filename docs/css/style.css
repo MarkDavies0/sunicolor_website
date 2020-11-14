@@ -25,7 +25,7 @@ h1 {
     /* color: rgb(135, 157, 192); Original LGHTER*/
     color: rgb(85, 101, 126);
     font-size: 2.5em;
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-family: "Hack";
     font-weight: normal;
     /* font-size:42px */
 }

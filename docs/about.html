@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
     <title>SUNIcolor</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
@@ -13,7 +14,7 @@
     <!-- Title -->
     <div id="header">
         <a href="index.html">
-            <h1>SUNIColor</h1>
+            <h1>SUNIcolor</h1>
         </a>
     </div>
 
@@ -41,13 +42,13 @@
         defined by Apple but are private and inaccessible to developers. In addition SUNIColor also includes all public
         UIColor constants.
         <br>
-        Learn more about <a href="https://bunn.dev/frameworks/2019/03/16/private-frameworks.html">private frameworks</a> (blog post by Fernando Bunn).
+        Learn more about <a target="_blank" href="https://bunn.dev/frameworks/2019/03/16/private-frameworks.html">private frameworks</a> (blog post by Fernando Bunn).
     </p>
     </div>
 
     <h2>How did you find them?</h2>
     <div class="horizontal">
-    <p>Using Private Framework header dumps from previous versions of iOS we can see all of the UIColor constants used
+    <p>Using <a target="_blank" href="https://github.com/xybp888/iOS-Header">Private Framework header dumps</a> from previous versions of iOS we can see all of the UIColor constants used
         by Apple. Then using Objective-C’s dynamic runtime we can load these frameworks on device and use
         “[NSClassFromString(@"UIColor") valueForKey: _selector_ ” to access the UIColor values.
     </p>
@@ -68,7 +69,3 @@
 </body>
 
 </html>
-<!-- 
-Learn more about <a href="https://bunn.dev/frameworks/2019/03/16/private-frameworks.html">private frameworks</a>
-            <br>
-            The extracted UIColors are then converted into CSS colors and added to an HTML list -->
