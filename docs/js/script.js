@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // addTextSrollingOnHover();
         setColorListULWidth()
         sortListAlphabetically();
+        updateAlphaTag();
 })
 
 window.addEventListener('resize', (event) => {
@@ -21,30 +22,45 @@ window.addEventListener('resize', (event) => {
         setColorListULWidth();
 })
 
+function updateAlphaTag() {
+        const colorItems = document.querySelectorAll(".colorItem");
 
-function addTextSrollingOnHover() {
-
-        const tansitionTimePerPixel = 0.015;
-        const textBoxes = document.querySelectorAll(
-                ".colorContainer"
-        );
-
-        textBoxes.forEach((textBox) => {
-                textBox.addEventListener('mouseenter', () => {
-                        let textWidth = textBox.childNodes[3].clientWidth;
-                        let boxWidth = parseFloat(getComputedStyle(textBox).width);
-                        let translateVal = Math.min(boxWidth - textWidth, 0);
-                        let translateTime = - tansitionTimePerPixel * translateVal + "s";
-                        textBox.childNodes[3].style.transitionDuration = translateTime;
-                        textBox.childNodes[3].style.transform = "translateX(" + translateVal + "px)";
-                })
-                textBox.addEventListener('mouseleave', () => {
-                        textBox.childNodes[3].style.transitionDuration = "0.3s";
-                        textBox.childNodes[3].style.transform = "translateX(0)";
-                })
-        });
-
+        colorItems.forEach((colorItem) => {
+                let details = getColorDetails(colorItem.style.backgroundColor);
+                console.log(details);
+                var displayed;
+                if (details.type = 'rgba' && details.alpha < 1.0) {
+                        displayed = rgbaOverWhite2rgb(details.red, details.green, details.blue, details.alpha);
+                        let p = colorItem.getElementsByTagName('p')[0];
+                        p.style.color = getContrastYIQ(displayed);
+                }
+        })
 }
+
+
+// function addTextSrollingOnHover() {
+
+//         const tansitionTimePerPixel = 0.015;
+//         const textBoxes = document.querySelectorAll(
+//                 ".colorContainer"
+//         );
+
+//         textBoxes.forEach((textBox) => {
+//                 textBox.addEventListener('mouseenter', () => {
+//                         let textWidth = textBox.childNodes[3].clientWidth;
+//                         let boxWidth = parseFloat(getComputedStyle(textBox).width);
+//                         let translateVal = Math.min(boxWidth - textWidth, 0);
+//                         let translateTime = - tansitionTimePerPixel * translateVal + "s";
+//                         textBox.childNodes[3].style.transitionDuration = translateTime;
+//                         textBox.childNodes[3].style.transform = "translateX(" + translateVal + "px)";
+//                 })
+//                 textBox.addEventListener('mouseleave', () => {
+//                         textBox.childNodes[3].style.transitionDuration = "0.3s";
+//                         textBox.childNodes[3].style.transform = "translateX(0)";
+//                 })
+//         });
+
+// }
 
 function filterColorList() {
         // Declare variables
@@ -98,36 +114,19 @@ function copyColor(elmnt) {
                 return
         }
 
-        let colorStr = elmnt.style.backgroundColor;
-        let type = colorStr.split("(")[0];
-        let rest = colorStr.split("(")[1];
-        rest = rest.substring(0, rest.length - 1);
 
+        let details = getColorDetails(elmnt.style.backgroundColor);
+        var red, green, blue, hue, saturation, brightness;
+        var alpha = 1.0;
         var stringToCopy = 'UIColor'; // 'NSColor'
 
-        let colorArr = rest.split(", ");
-        let first = parseFloat(colorArr[0]);
-        let second = parseFloat(colorArr[1]);
-        let third = parseFloat(colorArr[2]);
+        switch (details.type) {
+                case 'rgb', 'rgba':
+                        red = details.red / 255;
+                        green = details.green / 255;
+                        blue = details.blue / 255;
+                        if (details.type.includes('a')) { alpha = details.alpha;}
 
-
-        switch (type) {
-                case 'rgb':
-                        var red = first / 255;
-                        var green = second / 255;
-                        var blue = third / 255;
-                        if (isSwift) {
-                                stringToCopy += `(red: ${red.toFixed(5)}, green: ${green.toFixed(5)}, blue: ${blue.toFixed(5)}, alpha: ${1.0})`;
-                        } else {
-                                stringToCopy = `[UIColor colorWithRed: ${red.toFixed(5)} green: ${green.toFixed(5)} blue: ${blue.toFixed(5)} alpha: ${1.0}];`;
-                        }
-                        copyToClipboard(stringToCopy);
-                        break;
-                case 'rgba':
-                        var red = first / 255;
-                        var green = second / 255;
-                        var blue = third / 255;
-                        var alpha = parseFloat(colorArr[3]);
                         if (isSwift) {
                                 stringToCopy += `(red: ${red.toFixed(5)}, green: ${green.toFixed(5)}, blue: ${blue.toFixed(5)}, alpha: ${alpha})`;
                         } else {
@@ -135,22 +134,12 @@ function copyColor(elmnt) {
                         }
                         copyToClipboard(stringToCopy);
                         break;
-                case 'hsl':
-                        var hue = first / 360;
-                        var saturation = second / 100;
-                        var brightness = third / 100;
-                        if (isSwift) {
-                                stringToCopy += `(hue: ${hue.toFixed(5)}, saturation: ${saturation.toFixed(5)}, brightness: ${brightness.toFixed(5)}, alpha: ${alpha})`;
-                        } else {
-                                stringToCopy = `[UIColor colorWithHue: ${hue.toFixed(5)} saturation: ${saturation.toFixed(5)} brightness: ${brightness.toFixed(5)} alpha: ${1.0}];`;
-                        }
-                        copyToClipboard(stringToCopy);
-                        break;
-                case 'hsla':
-                        var hue = first / 360;
-                        var saturation = second / 100;
-                        var brightness = third / 100;
-                        var alpha = parseFloat(colorArr[3]);
+                case 'hsl', 'hsla':
+                        hue = details.hue / 360;
+                        saturation = details.saturation / 100;
+                        brightness = details.brightness / 100;
+                        if (details.type.includes('a')) { alpha = details.alpha;}
+
                         if (isSwift) {
                                 stringToCopy += `(hue: ${hue.toFixed(5)}, saturation: ${saturation.toFixed(5)}, brightness: ${brightness.toFixed(5)}, alpha: ${alpha})`;
                         } else {
@@ -238,3 +227,86 @@ function sortListAlphabetically(ul) {
                 .sort((a, b) => collator.compare(a.getElementsByTagName("span")[0].textContent, b.getElementsByTagName("span")[0].textContent))
                 .forEach(li => ul.appendChild(li));
 }
+
+// Color Helpers
+
+function getColorDetails(colorStr) {
+        let type = colorStr.split("(")[0];
+        let rest = colorStr.split("(")[1];
+        rest = rest.substring(0, rest.length - 1);
+        let colorArr = rest.split(", ");
+        let first = parseFloat(colorArr[0]);
+        let second = parseFloat(colorArr[1]);
+        let third = parseFloat(colorArr[2]);
+        let alpha = parseFloat(colorArr[3]);
+
+        switch (type) {
+                case 'rgb':
+                        return {
+                                type: type,
+                                red: first,
+                                green: second,
+                                blue: third,
+                        }
+                case 'rgba':
+                        return {
+                                type: type,
+                                red: first,
+                                green: second,
+                                blue: third,
+                                alpha: alpha
+                        }
+                case 'hsl':
+                        return {
+                                type: type,
+                                hue: first,
+                                saturation: second,
+                                brightness: third
+                        }
+                case 'hsla':
+                        return {
+                                type: type,
+                                hue: first,
+                                saturation: second,
+                                brightness: third,
+                                alpha: alpha
+                        }
+        }
+}
+
+function rgbaOverWhite2rgb(r, g, b, alpha) {
+
+    return {
+        r: (1 - alpha) * 255 + alpha * r,
+        g: (1 - alpha) * 255 + alpha * g,
+        b: (1 - alpha) * 255 + alpha * b
+    }
+}
+
+function getContrastYIQ(color){
+	var yiq = ((color.r*299)+(color.g*587)+(color.b*114))/1000;
+	return (yiq >= 128) ? 'rgb(5, 5, 5)' : 'rgb(250, 250, 250)';
+}
+
+
+// // Testing JQuery
+// $(document).ready(function () {
+
+
+
+//         var rgb = $('.colorItem').css('backgroundColor');
+//         console.log(rgb);
+//         var colors = rgb.match(/^rgba\((\d+),\s*(\d+),\s*(\d+),\s*(\d+)\)$/);
+//         var brightness = 1;
+
+//         var r = colors[1];
+//         var g = colors[2];
+//         var b = colors[3];
+
+//         var ir = Math.floor((255 - r) * brightness);
+//         var ig = Math.floor((255 - g) * brightness);
+//         var ib = Math.floor((255 - b) * brightness);
+
+//         $('.colorContainer > p').css('color', 'rgb(' + ir + ',' + ig + ',' + ib + ')');
+
+// });
