@@ -48,17 +48,22 @@ function addTextSrollingOnHover() {
 
 function filterColorList() {
         // Declare variables
-        var input, filter, ul, li, span, i, txtValue;
+        var input, searchText, ul, li, span, i, txtValue;
         input = document.getElementById('searchInput');
-        filter = input.value.toUpperCase();
+        searchText = input.value.toUpperCase();
         ul = document.getElementById("colorList");
         li = ul.getElementsByTagName('li');
 
         // Loop through all list items, and hide those who don't match the search query
         for (i = 0; i < li.length; i++) {
                 span = li[i].getElementsByTagName("span")[0];
+
                 txtValue = span.textContent || span.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                if (!searchText.includes('_')) {
+                        txtValue = txtValue.replace(/_/g, "");
+                }
+
+                if (txtValue.toUpperCase().indexOf(searchText) > -1) {
                         li[i].style.display = "";
                 } else {
                         li[i].style.display = "none";
@@ -83,7 +88,7 @@ function langBtnPressed(elmnt) {
 function copyColor(elmnt) {
         let name = elmnt.parentElement.getElementsByTagName("span")[0].innerText;
         let swiftName = name.substring(0, name.length - 5);
-        
+
         if (name.length > 5 && publicColors.includes(swiftName)) {
                 if (isSwift) {
                         copyToClipboard(`UIColor.${swiftName}`);
@@ -158,11 +163,8 @@ function copyColor(elmnt) {
 
 function copyToClipboard(text) {
         var dummy = document.createElement("textarea");
-        // to avoid breaking orgain page when copying more words
-        // cant copy when adding below this code
-        // dummy.style.display = 'none'
         document.body.appendChild(dummy);
-        //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+
         dummy.value = text;
         dummy.select();
         document.execCommand("copy");
