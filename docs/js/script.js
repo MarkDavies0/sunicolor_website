@@ -1,6 +1,6 @@
 let LONGEST_NAME = 'mailModernLabelledAddressAtomDefaultTextColor';
 var isSwift = true;
-const publicColors = ['systemBackground', 'secondarySystemBackground', 'tertiarySystemBackground', 'systemGroupedBackground', 'secondarySystemGroupedBackground', 'tertiarySystemGroupedBackground', 'label', 'secondaryLabel', 'tertiaryLabel', 'quaternaryLabel', 'placeholderText', 'separator', 'opaqueSeparator', 'systemBlue', 'systemGreen', 'systemIndigo', 'systemOrange', 'systemPink', 'systemPurple', 'systemRed', 'systemTeal', 'systemYellow', 'systemGray', 'systemGray2', 'systemGray3', 'systemGray4', 'systemGray5', 'systemGray5'];
+const publicColors = ['systemBackground', 'secondarySystemBackground', 'tertiarySystemBackground', 'systemGroupedBackground', 'secondarySystemGroupedBackground', 'tertiarySystemGroupedBackground', 'label', 'secondaryLabel', 'tertiaryLabel', 'quaternaryLabel', 'placeholderText', 'separator', 'opaqueSeparator', 'systemRed', 'systemOrange', 'systemYellow', 'systemGreen', 'systemBlue', 'systemIndigo', 'systemPurple', 'systemTeal', 'systemPink', 'systemGray', 'systemGray2', 'systemGray3', 'systemGray4', 'systemGray5', 'systemGray6'];
 
 document.addEventListener('DOMContentLoaded', (event) => {
         // Execute after the DOM Loads
