@@ -27,7 +27,6 @@ function updateAlphaTag() {
 
         colorItems.forEach((colorItem) => {
                 let details = getColorDetails(colorItem.style.backgroundColor);
-                console.log(details);
                 var displayed;
                 if (details.type = 'rgba' && details.alpha < 1.0) {
                         displayed = rgbaOverWhite2rgb(details.red, details.green, details.blue, details.alpha);
