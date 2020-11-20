@@ -235,6 +235,11 @@ input:checked+.slider:before {
     h2 {
         padding-top: 35px;
     }
+    .colorItem  {
+    width: 12vh;
+    /* 4vw; */
+    height: 12vh;
+    }
 }
 
 /* Pill Buttons */
