@@ -60,7 +60,7 @@ h2 {
 #subheaderLink {
     float: right;
     /* right: 10vw; */
-    color: rgb(85, 101, 126);
+    color: rgb(92, 92, 92);
     padding-left: 15px;
 }
 
@@ -219,7 +219,7 @@ input:checked+.slider:before {
     margin-right: 2em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     #subheader {
         display: block;
         padding-left: 0px;
@@ -257,7 +257,7 @@ input:checked+.slider:before {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #FFFFFF;
-    background-color: rgb(135, 157, 192);
+    background-color: rgb(85, 101, 126);
     text-align: center;
     transition: all 0.2s;
 }

@@ -91,7 +91,7 @@ function filterColorList() {
 }
 
 function langBtnPressed(elmnt) {
-        let styleStr = 'background-color: rgb(237, 240, 242); color: rgb(135, 157, 192);';
+        let styleStr = 'background-color: rgb(237, 240, 242); color: rgb(85, 101, 126);';
         elmnt.style = "";
 
         let swiftButton = document.getElementById("swift");
