@@ -1,6 +1,9 @@
 let LONGEST_NAME = 'mailModernLabelledAddressAtomDefaultTextColor';
-var isSwift = true;
-const publicColors = ['systemBackground', 'secondarySystemBackground', 'tertiarySystemBackground', 'systemGroupedBackground', 'secondarySystemGroupedBackground', 'tertiarySystemGroupedBackground', 'label', 'secondaryLabel', 'tertiaryLabel', 'quaternaryLabel', 'placeholderText', 'separator', 'opaqueSeparator', 'systemRed', 'systemOrange', 'systemYellow', 'systemGreen', 'systemBlue', 'systemIndigo', 'systemPurple', 'systemTeal', 'systemPink', 'systemGray', 'systemGray2', 'systemGray3', 'systemGray4', 'systemGray5', 'systemGray6'];
+const languages = { SWIFT: 'swift', OBJC: "objc", SWIFTUI: 'swiftui' }
+const defaultSwiftNamedColors = ['systemBackground', 'secondarySystemBackground', 'tertiarySystemBackground', 'systemGroupedBackground', 'secondarySystemGroupedBackground', 'tertiarySystemGroupedBackground', 'label', 'secondaryLabel', 'tertiaryLabel', 'quaternaryLabel', 'placeholderText', 'separator', 'opaqueSeparator', 'systemRed', 'systemOrange', 'systemYellow', 'systemGreen', 'systemBlue', 'systemIndigo', 'systemPurple', 'systemTeal', 'systemPink', 'systemGray', 'systemGray2', 'systemGray3', 'systemGray4', 'systemGray5', 'systemGray6'];
+const defaultSwiftUIColors = ['black', 'blue', 'gray', 'green', 'orange', 'pink', 'primary', 'purple', 'red', 'white']
+
+var selectedLanguage = languages.SWIFT;
 
 document.addEventListener('DOMContentLoaded', (event) => {
         // Execute after the DOM Loads
@@ -26,7 +29,8 @@ function updateAlphaTag() {
         const colorItems = document.querySelectorAll(".colorItem");
 
         colorItems.forEach((colorItem) => {
-                let details = getColorDetails(colorItem.style.backgroundColor);
+                let actualColorStr = String(colorItem.outerHTML).split(';')[0].split('background-color: ')[1];
+                let details = getColorDetails(actualColorStr);
                 var displayed;
                 if (details.type = 'rgba' && details.alpha < 1.0) {
                         displayed = rgbaOverWhite2rgb(details.red, details.green, details.blue, details.alpha);
@@ -89,14 +93,27 @@ function filterColorList() {
 function langBtnPressed(elmnt) {
         let styleStr = 'background-color: rgb(237, 240, 242); color: rgb(135, 157, 192);';
         elmnt.style = "";
-        if (elmnt.id == "swift") {
-                isSwift = true;
-                let objcBtn = document.getElementById("objc");
-                objcBtn.style = styleStr;
-        } else {
-                isSwift = false;
-                let swiftBtn = document.getElementById("swift");
-                swiftBtn.style = styleStr;
+
+        let swiftButton = document.getElementById("swift");
+        let objcButton = document.getElementById("objc");
+        let swiftuiButton = document.getElementById("swiftui");
+
+        switch (elmnt.id) {
+                case languages.SWIFT:
+                        selectedLanguage = languages.SWIFT;
+                        objcButton.style = styleStr;
+                        swiftuiButton.style = styleStr;
+                        break;
+                case languages.OBJC:
+                        selectedLanguage = languages.OBJC;
+                        swiftButton.style = styleStr;
+                        swiftuiButton.style = styleStr;
+                        break;
+                case languages.SWIFTUI:
+                        selectedLanguage = languages.SWIFTUI;
+                        objcButton.style = styleStr;
+                        swiftButton.style = styleStr;
+                        break;
         }
 }
 
@@ -104,32 +121,49 @@ function copyColor(elmnt) {
         let name = elmnt.parentElement.getElementsByTagName("span")[0].innerText;
         let swiftName = name.substring(0, name.length - 5);
 
-        if (name.length > 5 && publicColors.includes(swiftName)) {
-                if (isSwift) {
-                        copyToClipboard(`UIColor.${swiftName}`);
-                } else {
-                        copyToClipboard(`UIColor.${name}`);
+        if (name.length > 5 && defaultSwiftNamedColors.includes(swiftName)) {
+                switch (selectedLanguage) {
+                        case languages.SWIFT:
+                                copyToClipboard(`UIColor.${swiftName}`);
+                                break;
+                        case languages.OBJC:
+                                copyToClipboard(`UIColor.${name}`);
+                                break;
+                        case languages.SWIFTUI:
+                                let suiName = swiftName.substring(6).toLowerCase();
+                                if (defaultSwiftUIColors.includes(suiName)) {
+                                        copyToClipboard(`Color.${suiName}`)
+                                }
+                                break
+
                 }
                 return
         }
 
 
-        let details = getColorDetails(elmnt.style.backgroundColor);
+        let actualColorStr = String(elmnt.outerHTML).split(';')[0].split('background-color: ')[1];
+        let details = getColorDetails(actualColorStr);
         var red, green, blue, hue, saturation, brightness;
         var alpha = 1.0;
-        var stringToCopy = 'UIColor'; // 'NSColor'
+        var stringToCopy; // 'NSColor'
 
         switch (details.type) {
                 case 'rgb', 'rgba':
-                        red = details.red / 255;
-                        green = details.green / 255;
-                        blue = details.blue / 255;
-                        if (details.type.includes('a')) { alpha = details.alpha;}
+                        red = parseFloat((details.red / 255).toFixed(5));
+                        green = parseFloat((details.green / 255).toFixed(5));
+                        blue = parseFloat((details.blue / 255).toFixed(5));
+                        if (details.type.includes('a')) { alpha = details.alpha; }
 
-                        if (isSwift) {
-                                stringToCopy += `(red: ${red.toFixed(5)}, green: ${green.toFixed(5)}, blue: ${blue.toFixed(5)}, alpha: ${alpha})`;
-                        } else {
-                                stringToCopy = `[UIColor colorWithRed: ${red.toFixed(5)} green: ${green.toFixed(5)} blue: ${blue.toFixed(5)} alpha: ${alpha}];`;
+                        switch (selectedLanguage) {
+                                case languages.SWIFT:
+                                        stringToCopy = `UIColor(red: ${red}, green: ${green}, blue: ${blue}, alpha: ${alpha})`;
+                                        break;
+                                case languages.OBJC:
+                                        stringToCopy = `[UIColor colorWith: ${red} green: ${green} blue: ${blue} alpha: ${alpha}];`;
+                                        break;
+                                case languages.SWIFTUI:
+                                        stringToCopy = `Color(red: ${red}, green: ${green}, blue: ${blue}, opacity: ${alpha})`;
+                                        break;
                         }
                         copyToClipboard(stringToCopy);
                         break;
@@ -137,12 +171,15 @@ function copyColor(elmnt) {
                         hue = details.hue / 360;
                         saturation = details.saturation / 100;
                         brightness = details.brightness / 100;
-                        if (details.type.includes('a')) { alpha = details.alpha;}
+                        if (details.type.includes('a')) { alpha = details.alpha; }
 
-                        if (isSwift) {
-                                stringToCopy += `(hue: ${hue.toFixed(5)}, saturation: ${saturation.toFixed(5)}, brightness: ${brightness.toFixed(5)}, alpha: ${alpha})`;
-                        } else {
-                                stringToCopy = `[UIColor colorWithHue: ${hue.toFixed(5)} saturation: ${saturation.toFixed(5)} brightness: ${brightness.toFixed(5)} alpha: ${alpha}];`;
+                        switch (selectedLanguage) {
+                                case languages.SWIFT:
+                                        stringToCopy = `UIColor(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, alpha: ${alpha})`;
+                                case languages.OBJC:
+                                        stringToCopy = `[UIColor colorWithHue: ${hue} saturation: ${saturation} brightness: ${brightness} alpha: ${alpha}];`;
+                                case languages.SWIFTUI:
+                                        stringToCopy = `Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, opacity: ${alpha})`;
                         }
                         copyToClipboard(stringToCopy);
                         break;
@@ -214,10 +251,6 @@ function toggleDarkMode() {
 
 }
 
-function toggleSwiftObjc() {
-        isSwift = !isSwift;
-}
-
 function sortListAlphabetically(ul) {
         var ul = document.getElementById('colorList');
         let collator = new Intl.Collator('en', { ignorePunctuation: true });
@@ -275,16 +308,16 @@ function getColorDetails(colorStr) {
 
 function rgbaOverWhite2rgb(r, g, b, alpha) {
 
-    return {
-        r: (1 - alpha) * 255 + alpha * r,
-        g: (1 - alpha) * 255 + alpha * g,
-        b: (1 - alpha) * 255 + alpha * b
-    }
+        return {
+                r: (1 - alpha) * 255 + alpha * r,
+                g: (1 - alpha) * 255 + alpha * g,
+                b: (1 - alpha) * 255 + alpha * b
+        }
 }
 
-function getContrastYIQ(color){
-	var yiq = ((color.r*299)+(color.g*587)+(color.b*114))/1000;
-	return (yiq >= 128) ? 'rgb(5, 5, 5)' : 'rgb(250, 250, 250)';
+function getContrastYIQ(color) {
+        var yiq = ((color.r * 299) + (color.g * 587) + (color.b * 114)) / 1000;
+        return (yiq >= 128) ? 'rgb(5, 5, 5)' : 'rgb(250, 250, 250)';
 }
 
 
