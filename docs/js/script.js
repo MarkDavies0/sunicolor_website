@@ -319,26 +319,3 @@ function getContrastYIQ(color) {
         var yiq = ((color.r * 299) + (color.g * 587) + (color.b * 114)) / 1000;
         return (yiq >= 128) ? 'rgb(5, 5, 5)' : 'rgb(250, 250, 250)';
 }
-
-
-// // Testing JQuery
-// $(document).ready(function () {
-
-
-
-//         var rgb = $('.colorItem').css('backgroundColor');
-//         console.log(rgb);
-//         var colors = rgb.match(/^rgba\((\d+),\s*(\d+),\s*(\d+),\s*(\d+)\)$/);
-//         var brightness = 1;
-
-//         var r = colors[1];
-//         var g = colors[2];
-//         var b = colors[3];
-
-//         var ir = Math.floor((255 - r) * brightness);
-//         var ig = Math.floor((255 - g) * brightness);
-//         var ib = Math.floor((255 - b) * brightness);
-
-//         $('.colorContainer > p').css('color', 'rgb(' + ir + ',' + ig + ',' + ib + ')');
-
-// });
