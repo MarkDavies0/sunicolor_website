@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (document.body.offsetWidth < 450) {
                 LONGEST_NAME = 'tertiarySystemGroupedBackgroundColor';
         }
+
+        addNewlineIfScreenTooSmall()
         setColorContainerWidth();
         // addTextSrollingOnHover();
         setColorListULWidth()
@@ -38,6 +40,19 @@ function updateAlphaTag() {
                         p.style.color = getContrastYIQ(displayed);
                 }
         })
+}
+
+function addNewlineIfScreenTooSmall() {
+        console.log(window.innerWidth)
+        if (window.innerWidth <= 1100) {
+                let subLink = document.getElementById('subheaderLink');
+                subLink.style.display = 'block';
+                subLink.style.paddingLeft = '1.5em';
+                subLink.style.paddingTop = '15px';
+                let h2 = document.getElementsByTagName('h2')[0];
+                var br = document.createElement("br");
+                document.body.insertBefore(br, h2)
+        }
 }
 
 

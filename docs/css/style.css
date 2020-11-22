@@ -219,7 +219,7 @@ input:checked+.slider:before {
     margin-right: 2em;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1100px) {
     #subheader {
         display: block;
         padding-left: 0px;
@@ -237,13 +237,20 @@ input:checked+.slider:before {
         float: none;
     }
     h2 {
-        padding-top: 35px;
+        padding-top: 40px;
     }
     .colorItem  {
     width: 12vh;
     /* 4vw; */
     height: 12vh;
     }
+}
+@media only screen and (min-width: 1101px) {
+.langButton:hover {
+    cursor: pointer;
+    color: #FFFFFF !important;
+    background-color: rgb(135, 157, 192, 0.7) !important;
+}
 }
 
 /* Pill Buttons */
@@ -260,12 +267,6 @@ input:checked+.slider:before {
     background-color: rgb(85, 101, 126);
     text-align: center;
     transition: all 0.2s;
-}
-
-.langButton:hover {
-    cursor: pointer;
-    color: #FFFFFF !important;
-    background-color: rgb(135, 157, 192, 0.7) !important;
 }
 
 .footerTextBox {
