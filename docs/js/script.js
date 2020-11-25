@@ -43,8 +43,7 @@ function updateAlphaTag() {
 }
 
 function addNewlineIfScreenTooSmall() {
-        console.log(window.innerWidth)
-        if (window.innerWidth <= 1100) {
+        if (window.innerWidth <= 1000) {
                 let subLink = document.getElementById('subheaderLink');
                 subLink.style.display = 'block';
                 subLink.style.paddingLeft = '1.5em';

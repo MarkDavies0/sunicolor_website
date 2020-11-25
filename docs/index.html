@@ -42,7 +42,10 @@
     <!-- Sub Header -->
     <div id="subheader">
         <!-- Search Bar -->
-        <input type="text" id="searchInput" onkeyup="filterColorList()" placeholder="Search for names..">
+        <div id="searchWrapper">
+            <img src="css/assets/magGlass.jpg">
+            <input type="text" id="searchInput" onkeyup="filterColorList()" placeholder="Search by name">
+        </div>
         <div class="subContainer">
             <a class="langButton" id="swift" onclick="langBtnPressed(this)">Swift</a>
             <a class="langButton" id="objc" style="background-color: rgb(237, 240, 242); color: rgb(85, 101, 126);"
