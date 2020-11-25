@@ -24,7 +24,7 @@
 
     <h2>How do I use it?</h2>
     <div class="horizontal">
-        <p>Colors are shown in groups of two, the left showing what the color looks like in light mode and the right in
+        <p style="margin-left: 25px; margin-right: 25px;">Colors are shown in groups of two, the left showing what the color looks like in light mode and the right in
             dark mode.
             <br>
             Note: Colors with an alpha component are displayed over a white background and display an "A" when hovered over or clicked on.
@@ -37,7 +37,7 @@
     
     <h2>Where did these colors come from?</h2>
     <div class="horizontal">
-    <p>The colors are from internal iOS frameworks such as ChatKit, SiriUI, and FitnessUI. These color constants are
+    <p style="margin-left: 25px; margin-right: 25px;">The colors are from internal iOS frameworks such as ChatKit, SiriUI, and FitnessUI. These color constants are
         defined by Apple but are private and inaccessible to developers. In addition SUNIcolor also includes all public
         UIColor constants.
         <br>
@@ -47,7 +47,7 @@
 
     <h2>How did you find them?</h2>
     <div class="horizontal">
-    <p>Using <a target="_blank" href="https://github.com/xybp888/iOS-Header">Private Framework header dumps</a> from previous versions of iOS we can see all of the UIColor constants used
+    <p style="margin-left: 25px; margin-right: 25px;">Using <a target="_blank" href="https://github.com/xybp888/iOS-Header">Private Framework header dumps</a> from previous versions of iOS we can see all of the UIColor constants used
         by Apple. Then using Objective-C’s dynamic runtime we can load these frameworks on device and use
         “[NSClassFromString(@"UIColor") valueForKey: _selector_ ” to access the UIColor values.
     </p>
