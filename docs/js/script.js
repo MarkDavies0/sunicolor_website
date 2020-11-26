@@ -11,11 +11,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 LONGEST_NAME = 'tertiarySystemGroupedBackgroundColor';
         }
 
-        addNewlineIfScreenTooSmall()
+        addNewlineToSubheaderIfScreenTooSmall()
         setColorContainerWidth();
-        // addTextSrollingOnHover();
         setColorListULWidth()
-        sortListAlphabetically();
+        // sortListAlphabetically();
         updateAlphaTag();
 })
 
@@ -42,7 +41,7 @@ function updateAlphaTag() {
         })
 }
 
-function addNewlineIfScreenTooSmall() {
+function addNewlineToSubheaderIfScreenTooSmall() {
         if (window.innerWidth <= 1000) {
                 let subLink = document.getElementById('subheaderLink');
                 subLink.style.display = 'block';
@@ -89,7 +88,7 @@ function filterColorList() {
 
         // Loop through all list items, and hide those who don't match the search query
         for (i = 0; i < li.length; i++) {
-                span = li[i].getElementsByTagName("span")[0];
+                span = li[i].getElementsByClassName('cspan')[0];
 
                 txtValue = span.textContent || span.innerText;
                 if (!searchText.includes('_')) {
@@ -132,7 +131,7 @@ function langBtnPressed(elmnt) {
 }
 
 function copyColor(elmnt) {
-        let name = elmnt.parentElement.getElementsByTagName("span")[0].innerText;
+        let name = elmnt.parentElement.getElementsByClassName("cspan")[0].innerText;
         let swiftName = name.substring(0, name.length - 5);
 
         if (name.length > 5 && defaultSwiftNamedColors.includes(swiftName)) {
@@ -198,6 +197,7 @@ function copyColor(elmnt) {
                         copyToClipboard(stringToCopy);
                         break;
         }
+        elmnt.getElementsByClassName('tooltiptext')[0].style.visibility = 'visible';
 }
 
 function copyToClipboard(text) {
@@ -218,6 +218,7 @@ function setColorContainerWidth() {
         // Add class to each instance in for loop
         for (var i = 0; i < listItems.length; i++) {
                 listItems[i].style.width = width + "px";
+                listItems[i].getElementsByClassName('cspan')[0].style.width = width + "px";
         }
 }
 
@@ -270,7 +271,7 @@ function sortListAlphabetically(ul) {
         let collator = new Intl.Collator('en', { ignorePunctuation: true });
 
         Array.from(ul.getElementsByTagName("LI"))
-                .sort((a, b) => collator.compare(a.getElementsByTagName("span")[0].textContent, b.getElementsByTagName("span")[0].textContent))
+                .sort((a, b) => collator.compare(a.getElementsByClassName("cspan")[0].textContent, b.getElementsByClassName("cspan")[0].textContent))
                 .forEach(li => ul.appendChild(li));
 }
 

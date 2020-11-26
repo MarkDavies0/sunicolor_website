@@ -27,7 +27,6 @@ h1 {
     font-size: 2.5em;
     font-family: "Hack";
     font-weight: normal;
-    /* font-size:42px */
 }
 
 h2 {
@@ -96,7 +95,6 @@ ul#colorList li {
     background-color: white;
     list-style: none;
     position: relative;
-    overflow: hidden;
     font: caption;
     text-align: left;
 }
@@ -113,24 +111,28 @@ ul#colorList li {
     padding-left: 1em;
 }
 
-.colorContainer>span {
+.cspan {
     margin-top: 13px;
     margin-bottom: 13px;
+    margin-right: 13px;
     bottom: 0px;
     display: block;
     position: absolute;
     white-space: nowrap;
-    transition-timing-function: linear;
-    min-width: 3vw;
+    overflow-x: scroll !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cspan::-webkit-scrollbar {
+    display: none;
 }
 
 .colorItem {
     cursor: copy;
     background-color: white;
     width: 9vh;
-    /* 4vw; */
     height: 9vh;
-    /* 4vw; */
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-bottom: 0;
@@ -214,7 +216,7 @@ input:checked+.slider:before {
     border-radius: 7px;
 }
 
-#searchWrapper{
+#searchWrapper {
     position: relative;
 }
 
@@ -285,6 +287,45 @@ input:checked+.slider:before {
     text-align: center;
     transition: all 0.2s;
 }
+
+/* Tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #878787;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -70px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #878787 transparent transparent transparent;
+}
+
+/* .tooltip:hover .tooltiptext {
+    visibility: visible;
+} */
 
 .footerTextBox {
     font-size: small;
