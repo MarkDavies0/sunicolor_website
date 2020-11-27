@@ -5,7 +5,7 @@ html.color-theme-in-transition, html.color-theme-in-transition *, html.color-the
 
 html {
     --background: rgb(237, 240, 242);
-    --text-color-normal: black;
+    --text-color-normal: rgba(0, 0, 0, 0.95);
     line-height: 1.5;
 }
 
