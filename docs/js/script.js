@@ -32,11 +32,10 @@ function updateAlphaTag() {
         colorItems.forEach((colorItem) => {
                 let actualColorStr = String(colorItem.outerHTML).split(';')[0].split('background-color: ')[1];
                 let details = getColorDetails(actualColorStr);
-                var displayed;
                 if (details.type = 'rgba' && details.alpha < 1.0) {
-                        displayed = rgbaOverWhite2rgb(details.red, details.green, details.blue, details.alpha);
+                        let displayed = rgbaOverWhite2rgb(details.red, details.green, details.blue, details.alpha);
                         let p = colorItem.getElementsByTagName('p')[0];
-                        p.style.color = getContrastYIQ(displayed);
+                        p.style.color = getColorBasedOnContrastYIQ(displayed);
                 }
         })
 }
@@ -46,7 +45,7 @@ function addNewlineToSubheaderIfScreenTooSmall() {
                 let subLink = document.getElementById('subheaderLink');
                 subLink.style.display = 'block';
                 subLink.style.paddingLeft = '1.5em';
-                subLink.style.paddingTop = '15px';
+                subLink.style.paddingTop = '0.3em';
                 let h2 = document.getElementsByTagName('h2')[0];
                 var br = document.createElement("br");
                 document.body.insertBefore(br, h2)
@@ -148,7 +147,6 @@ function copyColor(elmnt) {
                                         copyToClipboard(`Color.${suiName}`)
                                 }
                                 break
-
                 }
                 return
         }
@@ -197,6 +195,7 @@ function copyColor(elmnt) {
                         copyToClipboard(stringToCopy);
                         break;
         }
+        // TODO: - animate this \/
         elmnt.getElementsByClassName('tooltiptext')[0].style.visibility = 'visible';
 }
 
@@ -330,7 +329,7 @@ function rgbaOverWhite2rgb(r, g, b, alpha) {
         }
 }
 
-function getContrastYIQ(color) {
+function getColorBasedOnContrastYIQ(color) {
         var yiq = ((color.r * 299) + (color.g * 587) + (color.b * 114)) / 1000;
         return (yiq >= 128) ? 'rgb(5, 5, 5)' : 'rgb(250, 250, 250)';
 }
