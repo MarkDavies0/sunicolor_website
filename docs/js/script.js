@@ -148,55 +148,55 @@ function copyColor(elmnt) {
                                 }
                                 break
                 }
-                return
-        }
+        } else {
 
+                let actualColorStr = String(elmnt.outerHTML).split(';')[0].split('background-color: ')[1];
+                let details = getColorDetails(actualColorStr);
+                var red, green, blue, hue, saturation, brightness;
+                var alpha = 1.0;
+                var stringToCopy; // 'NSColor'
 
-        let actualColorStr = String(elmnt.outerHTML).split(';')[0].split('background-color: ')[1];
-        let details = getColorDetails(actualColorStr);
-        var red, green, blue, hue, saturation, brightness;
-        var alpha = 1.0;
-        var stringToCopy; // 'NSColor'
+                switch (details.type) {
+                        case 'rgb', 'rgba':
+                                red = parseFloat((details.red / 255).toFixed(5));
+                                green = parseFloat((details.green / 255).toFixed(5));
+                                blue = parseFloat((details.blue / 255).toFixed(5));
+                                if (details.type.includes('a')) { alpha = details.alpha; }
 
-        switch (details.type) {
-                case 'rgb', 'rgba':
-                        red = parseFloat((details.red / 255).toFixed(5));
-                        green = parseFloat((details.green / 255).toFixed(5));
-                        blue = parseFloat((details.blue / 255).toFixed(5));
-                        if (details.type.includes('a')) { alpha = details.alpha; }
+                                switch (selectedLanguage) {
+                                        case languages.SWIFT:
+                                                stringToCopy = `UIColor(red: ${red}, green: ${green}, blue: ${blue}, alpha: ${alpha})`;
+                                                break;
+                                        case languages.OBJC:
+                                                stringToCopy = `[UIColor colorWith: ${red} green: ${green} blue: ${blue} alpha: ${alpha}];`;
+                                                break;
+                                        case languages.SWIFTUI:
+                                                stringToCopy = `Color(red: ${red}, green: ${green}, blue: ${blue}, opacity: ${alpha})`;
+                                                break;
+                                }
+                                copyToClipboard(stringToCopy);
+                                break;
+                        case 'hsl', 'hsla':
+                                hue = details.hue / 360;
+                                saturation = details.saturation / 100;
+                                brightness = details.brightness / 100;
+                                if (details.type.includes('a')) { alpha = details.alpha; }
 
-                        switch (selectedLanguage) {
-                                case languages.SWIFT:
-                                        stringToCopy = `UIColor(red: ${red}, green: ${green}, blue: ${blue}, alpha: ${alpha})`;
-                                        break;
-                                case languages.OBJC:
-                                        stringToCopy = `[UIColor colorWith: ${red} green: ${green} blue: ${blue} alpha: ${alpha}];`;
-                                        break;
-                                case languages.SWIFTUI:
-                                        stringToCopy = `Color(red: ${red}, green: ${green}, blue: ${blue}, opacity: ${alpha})`;
-                                        break;
-                        }
-                        copyToClipboard(stringToCopy);
-                        break;
-                case 'hsl', 'hsla':
-                        hue = details.hue / 360;
-                        saturation = details.saturation / 100;
-                        brightness = details.brightness / 100;
-                        if (details.type.includes('a')) { alpha = details.alpha; }
-
-                        switch (selectedLanguage) {
-                                case languages.SWIFT:
-                                        stringToCopy = `UIColor(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, alpha: ${alpha})`;
-                                case languages.OBJC:
-                                        stringToCopy = `[UIColor colorWithHue: ${hue} saturation: ${saturation} brightness: ${brightness} alpha: ${alpha}];`;
-                                case languages.SWIFTUI:
-                                        stringToCopy = `Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, opacity: ${alpha})`;
-                        }
-                        copyToClipboard(stringToCopy);
-                        break;
+                                switch (selectedLanguage) {
+                                        case languages.SWIFT:
+                                                stringToCopy = `UIColor(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, alpha: ${alpha})`;
+                                        case languages.OBJC:
+                                                stringToCopy = `[UIColor colorWithHue: ${hue} saturation: ${saturation} brightness: ${brightness} alpha: ${alpha}];`;
+                                        case languages.SWIFTUI:
+                                                stringToCopy = `Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, opacity: ${alpha})`;
+                                }
+                                copyToClipboard(stringToCopy);
+                                break;
+                }
         }
 
         let tooltip = elmnt.getElementsByClassName('tooltiptext')[0];
+        console.log(elmnt)
         tooltip.classList.add('visibile');
         tooltip.classList.add('pulse');
 
@@ -205,7 +205,7 @@ function copyColor(elmnt) {
                 tooltip.classList.remove('visibile');
                 tooltip.classList.add('fadeOut');
         })
-        
+
         tooltip.addEventListener("transitionend", (event) => {
                 tooltip.classList.remove('fadeOut');
         })
