@@ -195,8 +195,20 @@ function copyColor(elmnt) {
                         copyToClipboard(stringToCopy);
                         break;
         }
-        // TODO: - animate this \/
-        elmnt.getElementsByClassName('tooltiptext')[0].style.visibility = 'visible';
+
+        let tooltip = elmnt.getElementsByClassName('tooltiptext')[0];
+        tooltip.classList.add('visibile');
+        tooltip.classList.add('pulse');
+
+        tooltip.addEventListener("animationend", (event) => {
+                tooltip.classList.remove('pulse');
+                tooltip.classList.remove('visibile');
+                tooltip.classList.add('fadeOut');
+        })
+        
+        tooltip.addEventListener("transitionend", (event) => {
+                tooltip.classList.remove('fadeOut');
+        })
 }
 
 function copyToClipboard(text) {

@@ -299,7 +299,7 @@ input:checked+.slider:before {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 140px;
+    width: 92px;
     background-color: #878787;
     color: #fff;
     text-align: center;
@@ -309,7 +309,7 @@ input:checked+.slider:before {
     z-index: 1;
     bottom: 125%;
     left: 50%;
-    margin-left: -70px;
+    margin-left: -46px;
 }
 
 .tooltip .tooltiptext::after {
@@ -322,10 +322,6 @@ input:checked+.slider:before {
     border-style: solid;
     border-color: #878787 transparent transparent transparent;
 }
-
-/* .tooltip:hover .tooltiptext {
-    visibility: visible;
-} */
 
 .footerTextBox {
     font-size: small;
@@ -344,4 +340,34 @@ input:checked+.slider:before {
     text-decoration-style: initial;
     text-decoration-color: initial;
     text-decoration: none;
+}
+
+/* Animation */
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.visibile {
+    visibility: visible !important;
+}
+
+.fadeOut {
+    visibility: hidden !important;
+    opacity: 0;
+    transition: visibility 0.3s ease-out 0.3s, opacity 0.3s ease-out 0.3s !important;
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
 }
