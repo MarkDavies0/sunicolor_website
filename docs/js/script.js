@@ -1,9 +1,9 @@
-let LONGEST_NAME = 'mailModernLabelledAddressAtomDefaultTextColor';
+const LONGEST_NAME = 'mailModernLabelledAddressAtomDefaultTextColor';
 const languages = { SWIFT: 'swift', OBJC: "objc", SWIFTUI: 'swiftui' }
 const defaultSwiftNamedColors = ['systemBackground', 'secondarySystemBackground', 'tertiarySystemBackground', 'systemGroupedBackground', 'secondarySystemGroupedBackground', 'tertiarySystemGroupedBackground', 'label', 'secondaryLabel', 'tertiaryLabel', 'quaternaryLabel', 'placeholderText', 'separator', 'opaqueSeparator', 'systemRed', 'systemOrange', 'systemYellow', 'systemGreen', 'systemBlue', 'systemIndigo', 'systemPurple', 'systemTeal', 'systemPink', 'systemGray', 'systemGray2', 'systemGray3', 'systemGray4', 'systemGray5', 'systemGray6'];
 const defaultSwiftUIColors = ['black', 'blue', 'gray', 'green', 'orange', 'pink', 'primary', 'purple', 'red', 'white']
 
-var selectedLanguage = languages.SWIFT;
+let selectedLanguage = languages.SWIFT;
 
 document.addEventListener('DOMContentLoaded', (event) => {
         // Execute after the DOM Loads
@@ -47,7 +47,7 @@ function addNewlineToSubheaderIfScreenTooSmall() {
                 subLink.style.paddingLeft = '1.5em';
                 subLink.style.paddingTop = '0.3em';
                 let h2 = document.getElementsByTagName('h2')[0];
-                var br = document.createElement("br");
+                let br = document.createElement("br");
                 document.body.insertBefore(br, h2)
         }
 }
@@ -79,11 +79,10 @@ function addNewlineToSubheaderIfScreenTooSmall() {
 
 function filterColorList() {
         // Declare variables
-        var input, searchText, ul, li, span, i, txtValue;
+        var input, searchText, li, span, i, txtValue;
         input = document.getElementById('searchInput');
         searchText = input.value.toUpperCase();
-        ul = document.getElementById("colorList");
-        li = ul.getElementsByTagName('li');
+        li = document.getElementsByTagName('li');
 
         // Loop through all list items, and hide those who don't match the search query
         for (i = 0; i < li.length; i++) {
@@ -153,7 +152,7 @@ function copyColor(elmnt) {
                 let actualColorStr = String(elmnt.outerHTML).split(';')[0].split('background-color: ')[1];
                 let details = getColorDetails(actualColorStr);
                 var red, green, blue, hue, saturation, brightness;
-                var alpha = 1.0;
+                let alpha = 1.0;
                 var stringToCopy;
                 let prefix = isMacos ? 'NS' : 'UI';
 
@@ -213,7 +212,7 @@ function copyColor(elmnt) {
 }
 
 function copyToClipboard(text) {
-        var dummy = document.createElement("textarea");
+        let dummy = document.createElement("textarea");
         document.body.appendChild(dummy);
 
         dummy.value = text;
@@ -225,7 +224,7 @@ function copyToClipboard(text) {
 function setColorContainerWidth() {
         let width = getTextWidth(LONGEST_NAME, 'caption');
 
-        var listItems = document.getElementsByClassName("colorContainer");
+        let listItems = document.getElementsByClassName("colorContainer");
 
         // Add class to each instance in for loop
         for (var i = 0; i < listItems.length; i++) {
@@ -239,7 +238,7 @@ function setColorListULWidth() {
         let docWidth = document.body.offsetWidth;
         let liItemWidth = Math.ceil(width + 60 + 5);
 
-        var listUls = document.getElementsByTagName("ul");
+        let listUls = document.getElementsByTagName("ul");
         let numConts = Math.floor(docWidth / liItemWidth);
 
         const listWidth = numConts * liItemWidth;
@@ -259,9 +258,9 @@ function setColorListULWidth() {
 function getTextWidth(text, font) {
         // re-use canvas object for better performance
         var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
-        var context = canvas.getContext("2d");
+        let context = canvas.getContext("2d");
         context.font = font;
-        var metrics = context.measureText(text);
+        let metrics = context.measureText(text);
         return metrics.width;
 }
 
@@ -279,7 +278,7 @@ function toggleDarkMode() {
 }
 
 function sortListAlphabetically(ul) {
-        var ul = document.getElementById('colorList');
+        let ul = document.getElementById('colorList');
         let collator = new Intl.Collator('en', { ignorePunctuation: true });
 
         Array.from(ul.getElementsByTagName("LI"))
@@ -343,6 +342,6 @@ function rgbaOverWhite2rgb(r, g, b, alpha) {
 }
 
 function getColorBasedOnContrastYIQ(color) {
-        var yiq = ((color.r * 299) + (color.g * 587) + (color.b * 114)) / 1000;
+        let yiq = ((color.r * 299) + (color.g * 587) + (color.b * 114)) / 1000;
         return (yiq >= 128) ? 'rgb(5, 5, 5)' : 'rgb(250, 250, 250)';
 }
