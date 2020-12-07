@@ -2,6 +2,7 @@ const LONGEST_NAME = 'mailModernLabelledAddressAtomDefaultTextColor';
 const languages = { SWIFT: 'swift', OBJC: "objc", SWIFTUI: 'swiftui' }
 const defaultSwiftNamedColors = ['systemBackground', 'secondarySystemBackground', 'tertiarySystemBackground', 'systemGroupedBackground', 'secondarySystemGroupedBackground', 'tertiarySystemGroupedBackground', 'label', 'secondaryLabel', 'tertiaryLabel', 'quaternaryLabel', 'placeholderText', 'separator', 'opaqueSeparator', 'systemRed', 'systemOrange', 'systemYellow', 'systemGreen', 'systemBlue', 'systemIndigo', 'systemPurple', 'systemTeal', 'systemPink', 'systemGray', 'systemGray2', 'systemGray3', 'systemGray4', 'systemGray5', 'systemGray6'];
 const defaultSwiftUIColors = ['black', 'blue', 'gray', 'green', 'orange', 'pink', 'primary', 'purple', 'red', 'white']
+const defaultAppKitSwiftNamedColors = ['systemBlue', 'systemBrown', 'systemGray', 'systemGreen', 'systemIndigo', 'systemOrange', 'systemPink', 'systemPurple', 'systemRed', 'systemTeal', 'systemYellow', 'black', 'blue', 'brown', 'cyan', 'darkGray', 'gray', 'green', 'lightGray', 'magenta', 'orange', 'purple', 'red', 'white', 'yellow']
 
 let selectedLanguage = languages.SWIFT;
 
@@ -129,74 +130,91 @@ function langBtnPressed(elmnt) {
 }
 
 function copyColor(elmnt) {
-        let isMacos = elmnt.parentElement.parentElement.classList[0] == 'macList';
         let name = elmnt.parentElement.getElementsByClassName("cspan")[0].innerText;
         let swiftName = name.substring(0, name.length - 5);
+        let isMacos = elmnt.parentElement.parentElement.classList[0] == 'macList';
+        let prefix = isMacos ? 'NS' : 'UI';
 
-        if (name.length > 5 && defaultSwiftNamedColors.includes(swiftName)) {
+        if (defaultSwiftNamedColors.includes(swiftName) || (isMacos && defaultAppKitSwiftNamedColors.includes(swiftName))) {
                 switch (selectedLanguage) {
                         case languages.SWIFT:
-                                copyToClipboard(`UIColor.${swiftName}`);
-                                break;
+                                copyToClipboard(`${prefix}Color.${swiftName}`);
+                                showCopiedTooltipOn(elmnt);
+                                return;
                         case languages.OBJC:
-                                copyToClipboard(`UIColor.${name}`);
-                                break;
+                                copyToClipboard(`${prefix}Color.${name}`);
+                                showCopiedTooltipOn(elmnt);
+                                return;
                         case languages.SWIFTUI:
                                 let suiName = swiftName.substring(6).toLowerCase();
                                 if (defaultSwiftUIColors.includes(suiName)) {
                                         copyToClipboard(`Color.${suiName}`)
+                                        showCopiedTooltipOn(elmnt);
+                                        return
                                 }
                                 break
                 }
-        } else {
-                let actualColorStr = String(elmnt.outerHTML).split(';')[0].split('background-color: ')[1];
-                let details = getColorDetails(actualColorStr);
-                var red, green, blue, hue, saturation, brightness;
-                let alpha = 1.0;
-                var stringToCopy;
-                let prefix = isMacos ? 'NS' : 'UI';
-
-                switch (details.type) {
-                        case 'rgb', 'rgba':
-                                red = parseFloat((details.red / 255).toFixed(5));
-                                green = parseFloat((details.green / 255).toFixed(5));
-                                blue = parseFloat((details.blue / 255).toFixed(5));
-                                if (details.type.includes('a')) { alpha = details.alpha; }
-
-                                switch (selectedLanguage) {
-                                        case languages.SWIFT:
-                                                stringToCopy = `${prefix}Color(red: ${red}, green: ${green}, blue: ${blue}, alpha: ${alpha})`;
-                                                break;
-                                        case languages.OBJC:
-                                                stringToCopy = `[${prefix}Color colorWith: ${red} green: ${green} blue: ${blue} alpha: ${alpha}];`;
-                                                break;
-                                        case languages.SWIFTUI:
-                                                stringToCopy = `Color(red: ${red}, green: ${green}, blue: ${blue}, opacity: ${alpha})`;
-                                                break;
-                                }
-                                copyToClipboard(stringToCopy);
-                                break;
-                        case 'hsl', 'hsla':
-                                hue = details.hue / 360;
-                                saturation = details.saturation / 100;
-                                brightness = details.brightness / 100;
-                                if (details.type.includes('a')) { alpha = details.alpha; }
-
-                                switch (selectedLanguage) {
-                                        case languages.SWIFT:
-                                                stringToCopy = `${prefix}Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, alpha: ${alpha})`;
-                                        case languages.OBJC:
-                                                stringToCopy = `[${prefix}Color colorWithHue: ${hue} saturation: ${saturation} brightness: ${brightness} alpha: ${alpha}];`;
-                                        case languages.SWIFTUI:
-                                                stringToCopy = `Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, opacity: ${alpha})`;
-                                }
-                                copyToClipboard(stringToCopy);
-                                break;
-                }
         }
+        let actualColorStr = String(elmnt.outerHTML).split(';')[0].split('background-color: ')[1];
+        let details = getColorDetails(actualColorStr);
+        var red, green, blue, hue, saturation, brightness;
+        let alpha = 1.0;
+        var stringToCopy;
 
+        switch (details.type) {
+                case 'rgb', 'rgba':
+                        red = parseFloat((details.red / 255).toFixed(5));
+                        green = parseFloat((details.green / 255).toFixed(5));
+                        blue = parseFloat((details.blue / 255).toFixed(5));
+                        if (details.type.includes('a')) { alpha = details.alpha; }
+
+                        switch (selectedLanguage) {
+                                case languages.SWIFT:
+                                        stringToCopy = `${prefix}Color(red: ${red}, green: ${green}, blue: ${blue}, alpha: ${alpha})`;
+                                        break;
+                                case languages.OBJC:
+                                        stringToCopy = `[${prefix}Color colorWith: ${red} green: ${green} blue: ${blue} alpha: ${alpha}];`;
+                                        break;
+                                case languages.SWIFTUI:
+                                        stringToCopy = `Color(red: ${red}, green: ${green}, blue: ${blue}, opacity: ${alpha})`;
+                                        break;
+                        }
+                        copyToClipboard(stringToCopy);
+                        showCopiedTooltipOn(elmnt);
+                        break;
+                case 'hsl', 'hsla':
+                        hue = details.hue / 360;
+                        saturation = details.saturation / 100;
+                        brightness = details.brightness / 100;
+                        if (details.type.includes('a')) { alpha = details.alpha; }
+
+                        switch (selectedLanguage) {
+                                case languages.SWIFT:
+                                        stringToCopy = `${prefix}Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, alpha: ${alpha})`;
+                                case languages.OBJC:
+                                        stringToCopy = `[${prefix}Color colorWithHue: ${hue} saturation: ${saturation} brightness: ${brightness} alpha: ${alpha}];`;
+                                case languages.SWIFTUI:
+                                        stringToCopy = `Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, opacity: ${alpha})`;
+                        }
+                        copyToClipboard(stringToCopy);
+                        showCopiedTooltipOn(elmnt);
+                        break;
+        }
+}
+
+function copyToClipboard(text) {
+        let dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+
+        dummy.value = text;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+}
+
+function showCopiedTooltipOn(elmnt) {
         let tooltip = elmnt.getElementsByClassName('tooltiptext')[0];
-        console.log(elmnt)
+
         tooltip.classList.add('visibile');
         tooltip.classList.add('pulse');
 
@@ -209,16 +227,6 @@ function copyColor(elmnt) {
         tooltip.addEventListener("transitionend", (event) => {
                 tooltip.classList.remove('fadeOut');
         })
-}
-
-function copyToClipboard(text) {
-        let dummy = document.createElement("textarea");
-        document.body.appendChild(dummy);
-
-        dummy.value = text;
-        dummy.select();
-        document.execCommand("copy");
-        document.body.removeChild(dummy);
 }
 
 function setColorContainerWidth() {
@@ -278,6 +286,7 @@ function toggleDarkMode() {
 }
 
 function sortListAlphabetically() {
+        // TODO: this function is currently unused but add sort for macos div
         let ul = document.getElementById('colorList');
         let collator = new Intl.Collator('en', { ignorePunctuation: true });
 
