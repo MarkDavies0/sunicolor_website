@@ -130,6 +130,7 @@ function langBtnPressed(elmnt) {
 }
 
 function copyColor(elmnt) {
+        let isMacos = elmnt.parentElement.parentElement.classList[0] == 'macList';
         let name = elmnt.parentElement.getElementsByClassName("cspan")[0].innerText;
         let swiftName = name.substring(0, name.length - 5);
 
@@ -149,12 +150,12 @@ function copyColor(elmnt) {
                                 break
                 }
         } else {
-
                 let actualColorStr = String(elmnt.outerHTML).split(';')[0].split('background-color: ')[1];
                 let details = getColorDetails(actualColorStr);
                 var red, green, blue, hue, saturation, brightness;
                 var alpha = 1.0;
-                var stringToCopy; // 'NSColor'
+                var stringToCopy;
+                let prefix = isMacos ? 'NS' : 'UI';
 
                 switch (details.type) {
                         case 'rgb', 'rgba':
@@ -165,10 +166,10 @@ function copyColor(elmnt) {
 
                                 switch (selectedLanguage) {
                                         case languages.SWIFT:
-                                                stringToCopy = `UIColor(red: ${red}, green: ${green}, blue: ${blue}, alpha: ${alpha})`;
+                                                stringToCopy = `${prefix}Color(red: ${red}, green: ${green}, blue: ${blue}, alpha: ${alpha})`;
                                                 break;
                                         case languages.OBJC:
-                                                stringToCopy = `[UIColor colorWith: ${red} green: ${green} blue: ${blue} alpha: ${alpha}];`;
+                                                stringToCopy = `[${prefix}Color colorWith: ${red} green: ${green} blue: ${blue} alpha: ${alpha}];`;
                                                 break;
                                         case languages.SWIFTUI:
                                                 stringToCopy = `Color(red: ${red}, green: ${green}, blue: ${blue}, opacity: ${alpha})`;
@@ -184,9 +185,9 @@ function copyColor(elmnt) {
 
                                 switch (selectedLanguage) {
                                         case languages.SWIFT:
-                                                stringToCopy = `UIColor(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, alpha: ${alpha})`;
+                                                stringToCopy = `${prefix}Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, alpha: ${alpha})`;
                                         case languages.OBJC:
-                                                stringToCopy = `[UIColor colorWithHue: ${hue} saturation: ${saturation} brightness: ${brightness} alpha: ${alpha}];`;
+                                                stringToCopy = `[${prefix}Color colorWithHue: ${hue} saturation: ${saturation} brightness: ${brightness} alpha: ${alpha}];`;
                                         case languages.SWIFTUI:
                                                 stringToCopy = `Color(hue: ${hue}, saturation: ${saturation}, brightness: ${brightness}, opacity: ${alpha})`;
                                 }
