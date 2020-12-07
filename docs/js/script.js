@@ -277,7 +277,7 @@ function toggleDarkMode() {
 
 }
 
-function sortListAlphabetically(ul) {
+function sortListAlphabetically() {
         let ul = document.getElementById('colorList');
         let collator = new Intl.Collator('en', { ignorePunctuation: true });
 
