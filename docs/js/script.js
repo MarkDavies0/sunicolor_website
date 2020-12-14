@@ -8,12 +8,11 @@ let selectedLanguage = languages.SWIFT;
 
 document.addEventListener('DOMContentLoaded', (event) => {
         // Execute after the DOM Loads
-        if (document.body.offsetWidth < 450) {
-                LONGEST_NAME = 'tertiarySystemGroupedBackgroundColor';
+        if (document.body.offsetWidth > 450) {
+                setColorContainerWidth();
         }
 
         addNewlineToSubheaderIfScreenTooSmall()
-        setColorContainerWidth();
         setColorListULWidth()
         // sortListAlphabetically();
         updateAlphaTag();
@@ -42,7 +41,7 @@ function updateAlphaTag() {
 }
 
 function addNewlineToSubheaderIfScreenTooSmall() {
-        if (window.innerWidth <= 1000) {
+        if (document.body.offsetWidth <= 1000) {
                 let subLink = document.getElementById('subheaderLink');
                 subLink.style.display = 'block';
                 subLink.style.paddingLeft = '1.5em';
