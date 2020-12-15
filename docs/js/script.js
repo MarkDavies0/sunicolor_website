@@ -1,4 +1,4 @@
-const LONGEST_NAME = 'mailModernLabelledAddressAtomDefaultTextColor';
+let LONGEST_NAME = 'mailModernLabelledAddressAtomDefaultTextColor';
 const languages = { SWIFT: 'swift', OBJC: "objc", SWIFTUI: 'swiftui' }
 const defaultSwiftNamedColors = ['systemBackground', 'secondarySystemBackground', 'tertiarySystemBackground', 'systemGroupedBackground', 'secondarySystemGroupedBackground', 'tertiarySystemGroupedBackground', 'label', 'secondaryLabel', 'tertiaryLabel', 'quaternaryLabel', 'placeholderText', 'separator', 'opaqueSeparator', 'systemRed', 'systemOrange', 'systemYellow', 'systemGreen', 'systemBlue', 'systemIndigo', 'systemPurple', 'systemTeal', 'systemPink', 'systemGray', 'systemGray2', 'systemGray3', 'systemGray4', 'systemGray5', 'systemGray6'];
 const defaultSwiftUIColors = ['black', 'blue', 'gray', 'green', 'orange', 'pink', 'primary', 'purple', 'red', 'white']
