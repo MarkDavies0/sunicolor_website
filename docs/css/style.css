@@ -85,7 +85,7 @@ ul#colorList {
 
 ul#colorList li {
     display: inline-block;
-    margin: 20px 30px;
+    margin: 20px 15px 20px 45px
 }
 
 .colorContainer {
@@ -258,9 +258,6 @@ input:checked+.slider:before {
     .colorContainer {
         width: 70vw !important;
         height: calc(11vh + 5em) !important;
-    }
-    #colorList {
-        margin-left: 10% !important;
     }
 }
 

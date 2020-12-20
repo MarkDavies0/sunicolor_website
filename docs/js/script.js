@@ -44,8 +44,7 @@ function addNewlineToSubheaderIfScreenTooSmall() {
         if (document.body.offsetWidth <= 1000) {
                 let subLink = document.getElementById('subheaderLink');
                 subLink.style.display = 'block';
-                subLink.style.paddingLeft = '1.5em';
-                subLink.style.paddingTop = '0.3em';
+                subLink.style.paddingTop = '0.8em';
                 let h2 = document.getElementsByTagName('h2')[0];
                 let br = document.createElement("br");
                 document.body.insertBefore(br, h2)
@@ -246,11 +245,18 @@ function setColorListULWidth() {
         let liItemWidth = Math.ceil(width + 60 + 5);
 
         let listUls = document.getElementsByTagName("ul");
-        let numConts = Math.floor(docWidth / liItemWidth);
+        let numCollumns = Math.floor(docWidth / liItemWidth);
 
-        const listWidth = numConts * liItemWidth;
+        const listWidth = numCollumns * liItemWidth;
         for (var i = 0; i < listUls.length; i++) {
                 listUls[i].style.width = listWidth + "px";
+        }
+
+        if (numCollumns == 1) {
+                let allLIElements = document.getElementsByTagName("li");
+                for (var i = 0; i < allLIElements.length; i++) {
+                        allLIElements[i].style.margin = `20px 0px 0px ${((docWidth - listWidth) / 2 - 2)}px`;
+                }
         }
 }
 
