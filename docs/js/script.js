@@ -255,7 +255,8 @@ function setColorListULWidth() {
         if (numCollumns == 1) {
                 let allLIElements = document.getElementsByTagName("li");
                 for (var i = 0; i < allLIElements.length; i++) {
-                        allLIElements[i].style.margin = `20px 0px 0px ${((docWidth - listWidth) / 2 - 2)}px`;
+                        let liWidth = allLIElements[i].offsetWidth;
+                        allLIElements[i].style.margin = `20px 0px 0px ${((listWidth - liWidth) / 2 - 2)}px`;
                 }
         }
 }
