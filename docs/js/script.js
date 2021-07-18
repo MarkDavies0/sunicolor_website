@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         setColorListULWidth()
         // sortListAlphabetically();
         updateAlphaTag();
+        updateFooterDate();
 })
 
 window.addEventListener('resize', (event) => {
@@ -360,3 +361,8 @@ function getColorBasedOnContrastYIQ(color) {
         let yiq = ((color.r * 299) + (color.g * 587) + (color.b * 114)) / 1000;
         return (yiq >= 128) ? 'rgb(5, 5, 5)' : 'rgb(250, 250, 250)';
 }
+
+function updateFooterDate() {
+        const date = new Date();
+        document.getElementById('date').innerHTML = `${date.getFullYear()}`;
+      }
